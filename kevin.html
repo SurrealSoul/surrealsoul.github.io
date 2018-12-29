@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>K E V I N</title>
+        <meta name="description" content="Kevins final goodbye">
+        <meta name="author" content="A N D R E W  D A V I S">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="kevin.css">
+        <script src="jquery-3.3.1.min.js"></script>
+
+    </head>
+
+    <body background="bg_2.gif">
+            <div class="content">
+                <h2>Goodbye Kevin, Press <button onclick="changeImage()">F</button> to pay respects.</h2>
+                <img id="kevin_image" style="display: none"/>   
+            </div>
+           
+    </body>
+</html>
+
+<script>
+    var displayedImage = 0;
+
+    function changeImage(){
+
+        $("#kevin_image").show();
+
+        if (displayedImage >= 9)
+            displayedImage = 0;
+
+        displayedImage++;
+
+        $('#kevin_image').attr('src', 'images/kevin_' + displayedImage + '.jpg'); 
+    }
+
+    $(document).keypress(function(e) {
+    var keycode = (e.keyCode ? e.keyCode : e.which);
+        if (keycode == '102') {
+            changeImage();
+        }
+    });
+
+</script>

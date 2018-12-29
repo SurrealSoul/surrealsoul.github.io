@@ -3,6 +3,16 @@ body {
     height: 100%;
     position: fixed;
   }
+
+  button{
+    font-size: 35px;
+    text-decoration: underline;
+  }
+
+  #kevin_image{
+    height: 500px;
+    width: 500px;
+  }
   .content {
     position: absolute;
     top: 50%;
