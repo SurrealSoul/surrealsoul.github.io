@@ -5,7 +5,7 @@ body {
 }
 
 button{
-    font-size: 35px;
+    font-size: 28px;
     text-decoration: underline;
 }
 
@@ -16,12 +16,16 @@ button{
 
 .content {
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 160px;
     font-family: 'Lato', sans-serif;
-    font-size: 35px;
+    font-size: 28px;
     line-height: 40px;
     color: #ecf0f1;
+}
+
+p{
+    font-size: 8px;
 }

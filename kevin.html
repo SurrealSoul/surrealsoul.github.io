@@ -12,12 +12,14 @@
     </head>
 
     <body background="bg_2.gif">
-            <div class="content">
+            <div class="content" style="width: 900px;">
                 <h2>Goodbye Kevin, Press <button onclick="changeImage()">F</button> to pay respects.</h2>
-                <img id="kevin_image" style="display: none"/>   
+                <img id="kevin_image" style="display: none"/>
+                <p id="ps_note"></p>
             </div>
-           
     </body>
+
+    <!--Hello SmartAsset!!-->
 </html>
 
 <script>
@@ -27,7 +29,7 @@
 
         $("#kevin_image").show();
 
-        if (displayedImage >= 9)
+        if (displayedImage >= 15)
             displayedImage = 0;
 
         displayedImage++;
@@ -39,6 +41,7 @@
     var keycode = (e.keyCode ? e.keyCode : e.which);
         if (keycode == '102') {
             changeImage();
+            $('#ps_note').text("ps: invite me to the wedding <3, have a good one bud");
         }
     });
 
