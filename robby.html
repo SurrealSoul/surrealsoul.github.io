@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>👟 R O B B Y</title>
+        <meta name="description" content="What is Robby's Favorite?">
+        <meta name="author" content="A N D R E W  D A V I S">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="robby.css">
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src="nouns.js"></script>
+
+    </head>
+
+    <body bgcolor="black" onclick="changeNoun()">
+            <div class="content" style="width: 900px;">
+                <h2>👟👟👟👟👟👟👟👟👟👟👟👟</h2>
+                <h2>Robby what's your favorite <span id="random_noun"></span>?</h2>
+                <h2>👟👟👟👟👟👟👟👟👟👟👟👟</h2>
+            </div>
+            <!--These are completely random nouns sorry if they say bad things-->
+    </body>
+
+    <!--Hello SmartAsset!!-->
+</html>
+
+<script>
+    $(document).ready(function(){
+        changeNoun();
+    });
+
+    var displayedImage = 0;
+
+    function changeNoun(){
+
+        var item = nouns[Math.floor(Math.random()*nouns.length)];
+
+        $('#random_noun').text(item);
+    }
+
+    $(document).keypress(function(e) {
+    var keycode = (e.keyCode ? e.keyCode : e.which);
+        if (keycode == '102') {
+            changeImage();
+            
+        }
+    });
+
+</script>
