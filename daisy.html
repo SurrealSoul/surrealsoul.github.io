@@ -118,7 +118,7 @@ class Flower {
 }
 
 
-svg.addEventListener("mousedown", e => {
+svg.addEventListener("mousedown", "touchstart", e => {
   // clear the canvas
   while (svg.lastChild) {
     svg.removeChild(svg.lastChild);
@@ -127,12 +127,12 @@ svg.addEventListener("mousedown", e => {
   bool = true;
 });
 
-svg.addEventListener("mouseup", e => {
+svg.addEventListener("mouseup", "touchend", e => {
   bool = false;
   previous = {};
 });
 
-svg.addEventListener("mousemove", e => {
+svg.addEventListener("mousemove", "touchmove", e => {
   if (bool) {
     m = oMousePosSVG(e);
     // number of petals
