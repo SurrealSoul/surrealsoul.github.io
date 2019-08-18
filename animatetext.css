@@ -3,7 +3,6 @@ body {
     height: 100%;
     position: fixed;
   }
-
   button{
     font-size: 35px;
     text-decoration: underline;
@@ -24,6 +23,8 @@ body {
     font-size: 35px;
     line-height: 40px;
     color: #ecf0f1;
+    text-shadow: 2px 2px 0 rgba(255,0,255,.8), -2px -2px 0 rgba(0,255,255,.8);
+
   }
   .content__container {
     font-weight: 600;
