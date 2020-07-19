@@ -38,8 +38,7 @@ body {
     left: 0px;
     right: 0px;
   }
-  
-  /* ========== FLY STYLES START!! ========== */
+
   #fly-container {
     height: 75px;
     width: 75px;
@@ -222,10 +221,7 @@ body {
       opacity: 1;
     }
   }
-  
-  /* ========== CHAMELEON STYLES START!! ========== */
-  
-  /* ========== CHAMELEON BODY ========== */
+    
   .chameleon-body {
     top: 0px;
     bottom: 65px;
@@ -243,7 +239,6 @@ body {
   #fly-container:hover ~ #chameleon-container .chameleon-body .main-body {
     background-color: var(--environment-white-1);
   }
-  /* ========== CHAMELEON HEAD ========== */
   .chameleon-head {
     transform: rotate(0deg);
     top: 0px;
@@ -286,7 +281,6 @@ body {
       right: 0px;
     }
   }
-  /* ========== NECK OF CHAMELEON ========== */
   .chameleon-neck {
     width: 80px;
     height: 45px;
@@ -302,7 +296,6 @@ body {
   #fly-container:hover ~ #chameleon-container .chameleon-head .chameleon-neck {
     background-color: var(--environment-white-1);
   }
-  /* ========== CHAMELEON TONGUE ========== */
   .chameleon-tongue {
     animation-name: tongue-attack;
     animation-duration: 1.5s;
@@ -376,7 +369,6 @@ body {
     }
   }
   
-  /* ========== BOTTOM OF THE MOUTH ========= */
   .bottom-rotator {
     transform: rotate(0deg);
     top: 40px;
@@ -439,7 +431,6 @@ body {
   #fly-container:hover ~ #chameleon-container .chameleon-head .bottom-rotator .chameleon-bottom-mouth::before {
     background-color: var(--environment-white);
   }
-  /* ========== TOP OF THE MOUTH ========== */
   .top-rotator {
     transform: rotate(0deg);
     top: 0px;
@@ -490,7 +481,6 @@ body {
   #fly-container:hover ~ #chameleon-container .chameleon-head .top-rotator .chameleon-top-mouth {
     background-color: var(--environment-white-1);
   }
-  /* ========== EYE OF THE CHAMELEON ========== */
   .bottom-eye {
     height: 40px;
     width: 40px;

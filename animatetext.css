@@ -24,7 +24,12 @@ body {
     line-height: 40px;
     color: #ecf0f1;
     text-shadow: 2px 2px 0 rgba(255,0,255,.8), -2px -2px 0 rgba(0,255,255,.8);
+  }
 
+  a {
+    text-shadow: 2px 2px 0 rgba(255,0,255,.8), -2px -2px 0 rgba(0,255,255,.8);
+    color: #ecf0f1;
+    text-decoration: none; /* no underline */
   }
   .content__container {
     font-weight: 600;
