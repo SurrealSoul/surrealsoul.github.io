@@ -49,191 +49,10 @@
   }
 }
 
-#return-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.7);
-  width: 50px;
-  height: 50px;
-  display: block;
-  text-decoration: none;
-  -webkit-border-radius: 35px;
-  -moz-border-radius: 35px;
-  border-radius: 35px;
-  display: none;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-#return-to-top i {
-  color: #fff;
-  margin: 0;
-  position: relative;
-  left: 16px;
-  top: 13px;
-  font-size: 19px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-#return-to-top:hover {
-  background: rgba(0, 0, 0, 0.9);
-}
-
-#return-to-top:hover i {
-  color: #fff;
-  top: 5px;
-}
-
-
-/*making font-sizes base 10*/
-
-#social {
-  margin: 20px 10px;
-  text-align: center;
-}
 
 .btn-res {
   margin: 5px;
 }
-
-.smGlobalBtn {
-  /* global button class */
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  box-shadow: 0 2px 2px #999;
-  padding: 0px;
-  text-decoration: none;
-  text-align: center;
-  color: #fff;
-  font-size: 25px;
-  font-weight: normal;
-  line-height: 2em;
-  border-radius: 25px;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-}
-
-
-/* facebook button class*/
-
-.facebookBtn {
-  background: #4060A5;
-}
-
-.facebookBtn:before {
-  /* use :before to add the relevant icons */
-  font-family: "FontAwesome";
-  content: "\f09a";
-  /* add facebook icon */
-}
-
-.facebookBtn:hover {
-  color: #4060A5;
-  background: #fff;
-}
-
-
-/* twitter button class*/
-
-.twitterBtn {
-  background: #00ABE3;
-}
-
-.twitterBtn:before {
-  font-family: "FontAwesome";
-  content: "\f099";
-  /* add twitter icon */
-}
-
-.twitterBtn:hover {
-  color: #00ABE3;
-  background: #fff;
-}
-
-
-/* google plus button class*/
-
-.googleplusBtn {
-  background: #e64522;
-}
-
-.googleplusBtn:before {
-  font-family: "FontAwesome";
-  content: "\f0d5";
-  /* add googleplus icon */
-}
-
-.googleplusBtn:hover {
-  color: #e64522;
-  background: #fff;
-}
-
-
-/* linkedin button class*/
-
-.linkedinBtn {
-  background: #0094BC;
-}
-
-.linkedinBtn:before {
-  font-family: "FontAwesome";
-  content: "\f0e1";
-  /* add linkedin icon */
-}
-
-.linkedinBtn:hover {
-  color: #0094BC;
-  background: #fff;
-}
-
-
-/* pinterest button class*/
-
-.pinterestBtn {
-  background: #cb2027;
-}
-
-.pinterestBtn:before {
-  font-family: "FontAwesome";
-  content: "\f0d2";
-  /* add pinterest icon */
-}
-
-.pinterestBtn:hover {
-  color: #cb2027;
-  background: #fff;
-}
-
-
-/* tumblr button class*/
-
-.tumblrBtn {
-  background: #3a5876;
-}
-
-.tumblrBtn:before {
-  font-family: "FontAwesome";
-  content: "\f173";
-  /* add tumblr icon */
-}
-
-.tumblrBtn:hover {
-  color: #3a5876;
-  background: #fff;
-}
-
 
 /* email button class*/
 
@@ -268,7 +87,8 @@ html {
 /*setting up font sizes and base font family*/
 
 body {
-  minheight: 100%;
+  background-color: #f0f0f0;
+  min-height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -278,7 +98,7 @@ body {
   background-size: cover;
   letter-spacing: 0.01em;
   line-height: 1.6;
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: 400;
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -495,7 +315,7 @@ ol {
 }
 
 .say-body {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   text-align: left;
 }
 
@@ -558,9 +378,6 @@ ol {
   }
 }
 
-body{
-   background-color: #f0f0f0;
- }
  .progress{
    max-width:1000px;
    margin: 40px auto;

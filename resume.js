@@ -142,18 +142,10 @@ $(function(){
   html = tmpl(JORBS);
   $('.experience').append(html);
 
-  source = $('#festivals').html();
   tmpl = Handlebars.compile(source);
-  html = tmpl(FESTIVUS);
   $('.festivals').append(html);
 
   $('.section:even').addClass('even');
-  
-  setTimeout(function(){
-    if(confirm("Would you like to print?")){
-      window.print();
-    }
-  }, 5000)
   
 });
 
