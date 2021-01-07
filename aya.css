@@ -1,0 +1,92 @@
+body{background: #121212;}
+
+.cube_container{
+        perspective: 1500px;
+        margin-top: 15%;
+        margin-left: 50%;}
+
+.cube{
+        transform-style: preserve-3d;
+        transform: translateZ(-600px) rotateY(-10deg) rotateX(-10deg) translateX(200px);
+        height: 35px;
+        width: 35px;
+        animation: rotate 10s infinite linear;}
+
+@keyframes rotate{
+
+        from {transform: translateZ(-100px) rotateZ(170deg) rotateX(0deg) rotateY(0deg);}
+        to   {transform: translateZ(-100px) rotateZ(170deg) rotateX(-360deg) rotateY(720deg);}}
+
+.faces{ 
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        font-size: 100px;
+        border: 2px solid #DDDDDD;}
+
+.G1{ border-radius: 10px 10px 20px 10px; transform: translateZ(160px) translateX(-110px) translateY(-110px);}
+.G2{ border-radius: 10px 10px 20px 20px; transform: translateZ(160px) translateY(-110px);}
+.G3{ border-radius: 10px 10px 10px 20px; transform: translateZ(160px) translateX(110px) translateY(-110px);}
+.G4{ border-radius: 10px 20px 20px 10px; transform: translateZ(160px) translateX(-110px);}
+.G5{ border-radius: 20px 20px 20px 20px; transform: translateZ(160px);}
+.G6{ border-radius: 20px 10px 10px 20px; transform: translateZ(160px) translateX(110px);}
+.G7{ border-radius: 10px 20px 10px 10px; transform: translateZ(160px) translateX(-110px) translateY(110px);}
+.G8{ border-radius: 20px 20px 10px 10px; transform: translateZ(160px) translateY(110px);}
+.G9{ border-radius: 20px 10px 10px 10px; transform: translateZ(160px) translateX(110px) translateY(110px);}
+
+.Y1{ border-radius: 10px 10px 20px 10px; transform: translateY(-160px) translateX(-110px) translateZ(-110px) rotateX(90deg);}
+.Y2{ border-radius: 10px 10px 20px 20px; transform: translateY(-160px) translateZ(-110px) rotateX(90deg);}
+.Y3{ border-radius: 10px 10px 10px 20px; transform: translateY(-160px) translateX(110px) translateZ(-110px) rotateX(90deg);}
+.Y4{ border-radius: 10px 20px 20px 10px; transform: translateY(-160px) translateX(-110px) rotateX(90deg);}
+.Y5{ border-radius: 20px 20px 20px 20px; transform: translateY(-160px) rotateX(90deg);}
+.Y6{ border-radius: 20px 10px 10px 20px; transform: translateY(-160px) translateX(110px) rotateX(90deg);}
+.Y7{ border-radius: 10px 20px 10px 10px; transform: translateY(-160px) translateX(-110px) translateZ(110px) rotateX(90deg);}
+.Y8{ border-radius: 20px 20px 10px 10px; transform: translateY(-160px) translateZ(110px) rotateX(90deg);}
+.Y9{ border-radius: 20px 10px 10px 10px; transform: translateY(-160px) translateX(110px) translateZ(110px) rotateX(90deg);}
+
+.W1{ border-radius: 10px 10px 20px 10px; transform: translateY(160px) translateX(-110px) translateZ(110px) rotateX(-90deg);}
+.W2{ border-radius: 10px 10px 20px 20px; transform: translateY(160px) translateZ(110px) rotateX(-90deg);}
+.W3{ border-radius: 10px 10px 10px 20px; transform: translateY(160px) translateX(110px) translateZ(110px) rotateX(-90deg);}
+.W4{ border-radius: 10px 20px 20px 10px; transform: translateY(160px) translateX(-110px) rotateX(-90deg);}
+.W5{ border-radius: 20px 20px 20px 20px; transform: translateY(160px) rotateX(-90deg);}
+.W6{ border-radius: 20px 10px 10px 20px; transform: translateY(160px) translateX(110px) rotateX(-90deg);}
+.W7{ border-radius: 10px 20px 10px 10px; transform: translateY(160px) translateX(-110px) translateZ(-110px) rotateX(-90deg);}
+.W8{ border-radius: 20px 20px 10px 10px; transform: translateY(160px) translateZ(-110px) rotateX(-90deg);}
+.W9{ border-radius: 20px 10px 10px 10px; transform: translateY(160px) translateX(110px) translateZ(-110px) rotateX(-90deg);}
+
+.R1{ border-radius: 10px 10px 20px 10px; transform: translateX(-160px) translateZ(-110px) translateY(-110px) rotateY(-90deg);}
+.R2{ border-radius: 10px 10px 20px 20px; transform: translateX(-160px) translateY(-110px) rotateY(-90deg);}
+.R3{ border-radius: 10px 10px 10px 20px; transform: translateX(-160px) translateZ(110px) translateY(-110px) rotateY(-90deg);}
+.R4{ border-radius: 10px 20px 20px 10px; transform: translateX(-160px) translateZ(-110px) rotateY(-90deg);}
+.R5{ border-radius: 20px 20px 20px 20px; transform: translateX(-160px) rotateY(-90deg);}
+.R6{ border-radius: 20px 10px 10px 20px; transform: translateX(-160px) translateZ(110px) rotateY(-90deg);}
+.R7{ border-radius: 10px 20px 10px 10px; transform: translateX(-160px) translateZ(-110px) translateY(110px) rotateY(-90deg);}
+.R8{ border-radius: 20px 20px 10px 10px; transform: translateX(-160px) translateY(110px) rotateY(-90deg);}
+.R9{ border-radius: 20px 10px 10px 10px; transform: translateX(-160px) translateZ(110px) translateY(110px) rotateY(-90deg);}
+
+.O1{ border-radius: 10px 10px 20px 10px; transform: translateX(160px) translateZ(110px) translateY(-110px) rotateY(90deg);}
+.O2{ border-radius: 10px 10px 20px 20px; transform: translateX(160px) translateY(-110px) rotateY(90deg);}
+.O3{ border-radius: 10px 10px 10px 20px; transform: translateX(160px) translateZ(-110px) translateY(-110px) rotateY(90deg);}
+.O4{ border-radius: 10px 20px 20px 10px; transform: translateX(160px) translateZ(110px) rotateY(90deg);}
+.O5{ border-radius: 20px 20px 20px 20px; transform: translateX(160px) rotateY(90deg);}
+.O6{ border-radius: 20px 10px 10px 20px; transform: translateX(160px) translateZ(-110px) rotateY(90deg);}
+.O7{ border-radius: 10px 20px 10px 10px; transform: translateX(160px) translateZ(110px) translateY(110px) rotateY(90deg);}
+.O8{ border-radius: 20px 20px 10px 10px; transform: translateX(160px) translateY(110px) rotateY(90deg);}
+.O9{ border-radius: 20px 10px 10px 10px; transform: translateX(160px) translateZ(-110px) translateY(110px) rotateY(90deg);}
+
+.B1{ border-radius: 10px 10px 20px 10px; transform: translateZ(-160px) translateX(110px) translateY(-110px) rotateY(180deg);}
+.B2{ border-radius: 10px 10px 20px 20px; transform: translateZ(-160px) translateY(-110px) rotateY(180deg);}
+.B3{ border-radius: 10px 10px 10px 20px; transform: translateZ(-160px) translateX(-110px) translateY(-110px) rotateY(180deg);}
+.B4{ border-radius: 10px 20px 20px 10px; transform: translateZ(-160px) translateX(110px) rotateY(180deg);}
+.B5{ border-radius: 20px 20px 20px 20px; transform: translateZ(-160px) rotateY(180deg);}
+.B6{ border-radius: 20px 10px 10px 20px; transform: translateZ(-160px) translateX(-110px) rotateY(180deg);}
+.B7{ border-radius: 20px 20px 10px 10px; transform: translateZ(-160px) translateX(110px) translateY(110px) rotateY(180deg);}
+.B8{ border-radius: 20px 20px 10px 10px; transform: translateZ(-160px) translateY(110px) rotateY(180deg);}
+.B9{ border-radius: 20px 20px 10px 10px; transform: translateZ(-160px) translateX(-110px) translateY(110px) rotateY(180deg);}
+
+.W{background-color: #F1F1F1;}
+.Y{background-color: #DDDD00;}
+.G{background-color: #007700;}
+.B{background-color: #0000AA;}
+.O{background-color: #ED7700;}
+.R{background-color: #AA0000;}
