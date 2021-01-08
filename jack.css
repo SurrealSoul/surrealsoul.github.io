@@ -1,190 +1,50 @@
-html,
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  #video-background {
+    position: fixed;
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto;
+    z-index: -100;
+  }
+  
+  article {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
+    border: 10px solid rgba(255, 255, 255, 0.5);
+    margin: 10px;
+  }
+  
+  h1 {
+    position: absolute;
+    top: 60%;
     width: 100%;
-    height: 100%;
-}
-
-button{
-    cursor:pointer;
-    border:none;
-    background:none;
-    color:rgb(187,187,187);
-}
-
-.menu-bar {
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    height:20px;
-    background-color: rgb(60,63,65);
-    border-bottom: 1px solid rgb(40,40,40);
-    color:rgb(187,187,187);
-}
-
-.nav-bar {
-    position: absolute;
-    top:21px;
-    left:0;
-    right:0;
-    border-top:1px solid rgb(85,85,85);
-    height:24px;
-    border-bottom: 1px solid rgb(40,40,40);
-    background-color: rgb(60,63,65);
-    color:rgb(187,187,187);
-}
-.left-tab-bar{
-    position: absolute;
-    top:46px;
-    left:0;
-    bottom:45px;
-    width:20px;
-    border-top:1px solid rgb(36,36,36);
-    border-right:1px solid rgb(36,36,36);
-    border-bottom: 1px solid rgb(36,36,36);
-    background-color: rgb(60,63,65);
-    color:rgb(187,187,187);
-}
-.left-tab-bar > .top-tabs{
-    position: absolute;
-    top:0;
-    left:21px;
-    height:20px;
-    white-space: nowrap;
-    transform: rotate(90deg);
-    transform-origin: left top;
-}
-
-.left-tab-bar > .top-tabs > button {
-    transform: rotate(180deg);
-    transform-origin: center;
-}
-.active {
-    background-color: rgb(45,47,48);
-}
-
-.left-tab {
-    position: absolute;
-    top:47px;
-    left:21px;
-    width:380px;
-    bottom:45px;
-    border-top: 1px solid rgb(85,85,85);
-    border-left: 1px solid rgb(85,85,85);
-    border-right: 1px solid rgb(40,40,40);
-    background-color: rgb(60,63,65);
-    color:rgb(187,187,187);
-}
-
-.left-tab > .title-bar {
-    height:24px;
-    background-color: rgb(66,77,95);
-    border-top: 1px solid rgb(89,100,115);
-    border-bottom: 1px solid rgb(36,38,39);
-}
-
-.workspace {
-    position: absolute;
-    top:47px;
-    left:402px;
-    bottom:45px;
-    right: 20px;
-    background-color: #2B2B2B;
-}
-.right-tab-bar{
-    position: absolute;
-    top:47px;
-    right:0;
-    width:20px;
-    bottom:45px;
-    border-left: 1px solid rgb(85,85,85);
-    background-color: rgb(60,63,65);
-    color:rgb(187,187,187);
-}
-.right-tab-bar>.top-tabs{
-    position: absolute;
-    top:0;
-    left:20px;
-    height:20px;
-    white-space: nowrap;
-    transform: rotate(90deg);
-    transform-origin: left top;
-}
-.bottom-tab-bar{
-    position: absolute;
-    left:0;
-    right:0;
-    bottom:21px;
-    height:23px;
-    border-top:1px solid rgb(85,85,85);
-    background-color: rgb(60,63,65);
-    border-bottom: 1px solid rgb(40,40,40);
-    color:rgb(187,187,187);
-    padding: 0 20px;
-}
-.foot-bar{
-    position: absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    height:20px;
-    border-top:1px solid rgb(85,85,85);
-    background-color: rgb(60,63,65);
-    color:rgb(187,187,187);
-}
-.arrow-right {
-    overflow: hidden;
-    display: inline-block;
-    font-size: 20px; /*set the size for arrow*/
-    width: 8px;
-    height: 8px;
-    border-top: 1px solid rgb(19,19,20);
-    border-right: 1px solid rgb(19,19,20);
-    transform: rotate(54deg) skew(24deg);
-}
-.fa{
-    color:#BD9662;
-    margin:0 4px;
-}
-.nav-bar button{
-    position: relative; 
-	float:left;
-    height:99%;
-    margin:0 8px 0 0;
-}
-
-
-.nav-bar button::after{
-    content: " "; 
-	display: block; 
-	width: 0; 
-	height: 0;
-	border-top: 11px solid transparent;           /* Go big on the size, and let overflow hide */
-	border-bottom: 11px solid transparent;
-	border-left: 5px solid rgb(60,63,65);
-	position: absolute;
-	top: 0;
-    margin-left:4;
-	left: 100%;
-	z-index: 50; 
-}
-.nav-bar button::before{
-    content: " "; 
-	display: block; 
-	width: 0; 
-	height: 0;
-	border-top: 11px solid transparent;           /* Go big on the size, and let overflow hide */
-	border-bottom: 11px solid transparent;
-	border-left: 7px solid #2C2E2F;
-	position: absolute;
-	top: 0;
-    margin-left:6;
-	left: 100%;
-	z-index: 49; 
-}
+    font-size: 36px;
+    letter-spacing: 3px;
+    color: #fff;
+    font-family: Oswald, sans-serif;
+    text-align: center;
+  }
+  
+  h1 span {
+    font-family: sans-serif;
+    letter-spacing: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  h1 span a {
+    color: #fff;
+  }
