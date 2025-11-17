@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cabin Mystery</title>
+    
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 3px solid #6a0a0a;
+        }
+        h1 {
+            color: #a00000;
+            margin: 0;
+            font-size: 3em;
+        }
+        h2 {
+            color: #c79a00;
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #dcdcdc;
+            margin-bottom: 5px;
+        }
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #2b2b2b;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.7);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        #characters {
+            display: grid;
+            /* This creates a responsive grid. It will fit as many cards as it can 
+               that are at least 280px wide. */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .character-card {
+            background-color: #383838;
+            border: 1px solid #555;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+            transition: transform 0.2s ease;
+        }
+        .character-card:hover {
+            transform: translateY(-5px);
+        }
+        .victim-card {
+            background-color: #400;
+            border: 1px solid #800;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #777;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Murder at the Cabin</h1>
+    </header>
+
+    <main>
+        <section id="setup">
+            <h2>The Setup</h2>
+            <p>19 people have gathered at the isolated mountain cabin for Cornelius Crimson's annual winter dinner party - a lavish tradition he's hosted for the past decade. A raging blizzard has cut off all roads and communication lines. You are trapped.</p>
+            <p>This morning, Cornelius Crimson was found dead in his study... **an empty vial of poison clutched in his hand.** It looks like a suicide, but the door was locked from the *outside*. One of you is a killer. It's up to the rest of you to find out who before they strike again.</p>
+        </section>
+
+        <section id="victim">
+            <h2>The Victim</h2>
+            <div class="victim-card">
+                <h3>Cornelius Crimson (The Host)</h3>
+                <p>An eccentric and wealthy billionaire who loved hosting elaborate gatherings. He invited you all to his annual winter celebration, but someone turned his final party into their last supper.</p>
+            </div>
+        </section>
+
+        <section id="characters">
+            <h2>The Suspects (19)</h2>
+            <p>Everyone has a motive. Everyone has a secret. Click on each character's profile to learn more about them and uncover what they're hiding.</p>
+
+            <div class="character-card">
+                <h3>1. Eleanor Crimson (The Widow)</h3>
+                <p>Cornelius's young, beautiful wife. She seems devastated, but was seen arguing with him just last night.</p>
+                <a href="character_eleanor.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+            <div class="character-card">
+                <h3>2. Julian Crimson (The Disowned Son)</h3>
+                <p>Cornelius's only son, cut off from the family fortune years ago. He showed up uninvited.</p>
+                <a href="character_julian.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+            <div class="character-card">
+                <h3>3. Beatrice Crimson (The Spiteful Sister)</h3>
+                <p>Cornelius's estranged sister. She believes the entire Crimson fortune rightfully belongs to her.</p>
+                <a href="character_beatrice.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+            <div class="character-card">
+                <h3>4. Arthur Doyle (The Butler)</h3>
+                <p>The long-serving, stoic butler. He knows all the family's secrets and seems to be watching everyone.</p>
+                <a href="character_arthur.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+            <div class="character-card">
+                <h3>5. Dr. Evelyn Reed (The Personal Physician)</h3>
+                <p>The prim and proper doctor who was on call 24/7 to manage Cornelius's "condition."</p>
+                <a href="character_evelyn.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+            <div class="character-card">
+                <h3>6. Mr. Silas Croft (The Family Lawyer)</h3>
+                <p>The man who is here to read the will. He seems nervous and is carrying a locked briefcase.</p>
+                <a href="character_silas.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+            <div class="character-card">
+                <h3>7. Chloe Bishop (The Personal Assistant)</h3>
+                <p>Cornelius's efficient and overworked assistant. She handled all his appointments and correspondence.</p>
+                <a href="character_chloe.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+            <div class="character-card">
+                <h3>8. Marco "The Shark" Varelli (The Business Rival)</h3>
+                <p>A ruthless corporate raider who Cornelius nearly bankrupted. He claims he's here to "pay his respects."</p>
+                <a href="character_marco.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+            <div class="character-card">
+                <h3>9. Fiona "Foxy" Gable (The Journalist)</h3>
+                <p>A cunning investigative reporter who snuck in pretending to be a cousin. She's hunting for a story.</p>
+                <a href="character_fiona.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+            <div class="character-card">
+                <h3>10. Chef Antoine (The Private Chef)</h3>
+                <p>A high-strung, famous chef hired for the weekend. He's furious about the blizzard and the lack of fresh ingredients.</p>
+                <a href="character_antoine.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+             <div class="character-card">
+                <h3>11. Genevieve (The Maid)</h3>
+                <p>A new, quiet maid who seems terrified of everyone. She was seen weeping in the hallway this morning.</p>
+                <a href="character_genevieve.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+             <div class="character-card">
+                <h3>12. "Captain" Jack (The Groundskeeper)</h3>
+                <p>A grizzled, one-eyed man who lives in a shack on the property. He handles the generators and snowplows.</p>
+                <a href="character_jack.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+             <div class="character-card">
+                <h3>13. Professor Alistair Finch (The Historian)</h3>
+                <p>An old college "friend" of Cornelius's. He's an expert on rare artifacts, which the cabin is full of.</p>
+                <a href="character_alistair.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+            <div class="character-card">
+                <h3>14. Blake Riley (The Bodyguard)</h3>
+                <p>Eleanor's personal bodyguard, hired after she claimed Cornelius was "unstable." He never leaves her side.</p>
+                <a href="character_blake.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+            <div class="character-card">
+                <h3>15. Madam Zora (The Fortune Teller)</h3>
+                <p>A "spiritualist" Cornelius hired for "entertainment." She's been predicting doom since she arrived.</p>
+                <a href="character_zora.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+            <div class="character-card">
+                <h3>16. Timmy Crimson (The "Forgotten" Nephew)</h3>
+                <p>A bumbling, awkward nephew who no one has seen in years. He seems harmless and clumsy.</p>
+                <a href="character_timmy.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+            <div class="character-card">
+                <h3>17. Cassandra (The "Other" Widow)</h3>
+                <p>A mysterious woman in black who claims to be Cornelius's *first* wife, who everyone thought was dead.</p>
+                <a href="character_cassandra.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+            <div class="character-card">
+                <h3>18. Officer Dunn (The "Local Cop")</h3>
+                <p>A man in a police uniform who arrived just before the storm. He claims he was checking on a distress call.</p>
+                <a href="character_dunn.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+            <div class="character-card">
+                <h3>19. The Twins (Lily and Leo)</h3>
+                <p>Chef Antoine's silent, creepy twins. They just watch... and whisper to each other.</p>
+                <a href="character_twins.html" style="display: inline-block; background-color: #c79a00; color: white; text-decoration: none; padding: 8px 12px; border-radius: 3px; margin-top: 10px; font-size: 0.9em;">Full Profile →</a>
+            </div>
+
+        </section>
+
+        <section id="clues">
+            <h2>TODO: Clues & Evidence</h2>
+            <p>As you investigate the scene, several disturbing clues emerge:</p>
+            <ul>
+                <li>A muddy boot print was found near the fireplace - too small to belong to a man</li>
+                <li>A single red sequin was discovered clutched in Cornelius's hand</li>
+                <li>The study window was unlocked, but the snow outside remains undisturbed</li>
+                <li>An empty vial labeled "Dr. Reed's Medical Supplies" was found, but it contained spider venom, not her usual medications</li>
+                <li>The dinner table was set for exactly 20 people, but only 19 guests arrived</li>
+                <li>Cornelius's wine glass from last night's toast shows traces of an unknown substance</li>
+                <li>The grandfather clock in the study stopped at 3:17 AM</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>The killer is among you. Find them before the blizzard clears... or you're next.</p>
+    </footer>
+
+
+</body>
+</html>
