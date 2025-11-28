@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Captain" Jack - The Groundskeeper</title>
+
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 3px solid #6a0a0a;
+        }
+
+        h1 {
+            color: #a00000;
+            margin: 0;
+            font-size: 3em;
+        }
+
+        h2 {
+            color: #c79a00;
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #2b2b2b;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .character-details {
+            background-color: #383838;
+            border: 1px solid #555;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        .secret {
+            background-color: #222;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            border-left: 3px solid #a00000;
+            font-style: italic;
+            color: #ffdddd;
+        }
+
+        .back-link {
+            display: inline-block;
+            background-color: #6a0a0a;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            transition: background-color 0.2s;
+        }
+
+        .back-link:hover {
+            background-color: #8b0000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #777;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>"Captain" Jack (ID: Q9)</h1>
+    </header>
+
+    <main>
+        <a href="cabin.html" class="back-link">← Back to Murder Mystery</a>
+
+        <div class="character-details">
+            <h2>The Groundskeeper</h2>
+            <p>A grizzled, one-eyed man who lives in a shack on the property. He handles the generators and snowplows.
+            </p>
+
+            <div class="secret">
+                <button onclick="revealSecret(this)"
+                    style="padding: 10px; background: #a00000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Secret</button>
+                <div style="display:none;">
+                    <h3>His Secret</h3>
+                    <p>He's the one who sabotaged the snowplow and cut the phone lines. He was paid by someone... but
+                        who?</p>
+                </div>
+            </div>
+
+            <h3>Background</h3>
+            <p>"Captain" Jack McReady is a former Navy man who lost his eye in combat and his way in civilian life. He's
+                worked as groundskeeper for the Crimson cabin for the past decade, maintaining the generators, plowing
+                the roads, and keeping the property secure. His military background makes him resourceful and capable of
+                handling any situation, but also prone to following orders without question.</p>
+
+            <h3>Motive</h3>
+            <p>Jack doesn't appear to have a personal vendetta against Cornelius, but his dire financial situation makes
+                him vulnerable to bribery. Someone paid him handsomely to ensure that no one could leave the cabin this
+                weekend - cutting the phone lines and sabotaging the snowplow to create the perfect isolated crime
+                scene. The question remains: who hired him, and did they tell him why?</p>
+
+            <div class="opportunity-section" style="margin-top: 30px;">
+                <button onclick="revealOpportunity(this)"
+                    style="padding: 10px; background: #c79a00; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Opportunity</button>
+                <div style="display:none;">
+                    <h3>Opportunity</h3>
+                    <p>As the groundskeeper, Jack controls all the cabin's essential systems and security. He knows
+                        every entrance and exit, has access to all the utility areas, and understands exactly how to cut
+                        the property off from the outside world. His military training also means he knows how to follow
+                        orders and keep secrets under pressure.</p>
+                </div>
+            </div>
+
+            
+            <h3>Alibi</h3>
+            <p>Claims he was checking the generator in the shed. He says the storm was threatening to cut the power lines.</p>
+
+            
+            <h3>Accusations</h3>
+            <ul>
+                <li>I saw <strong>Dunn</strong> watching <strong>Julian</strong> on the porch.</li>
+    <li>I saw fresh tracks leading to the window. <strong>Blake</strong> saw them too.</li>
+    <li>I saw <strong>Cassandra</strong> standing over Cornelius's grave.</li>
+
+    <li>I noticed that <strong>Dr. Evelyn Reed</strong> claims she can't perform an autopsy due to "lack of proper equipment".</li>
+    <li>I noticed that <strong>Julian Crimson</strong> was heard making violent threats about getting "what's his".</li>
+</ul>
+
+            <h3>Suspicious Behavior</h3>
+            <ul>
+                <li>Claims the snowplow "mysteriously" broke down just before the storm</li>
+                <li>Can't explain why the phone lines failed at the exact same time</li>
+                <li>Has been nervous and evasive when asked about repairs</li>
+                <li>Was seen accepting money from Marco Varelli</li>
+                <li>Has been checking his pockets frequently, as if carrying something valuable</li>
+                <li>Shows no surprise about being trapped, unlike everyone else</li>
+                <li>Has been watching the guests more than maintaining the property</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>Even honest soldiers can be bought... if the price is right.</p>
+    </footer>
+
+
+    <script>
+        function revealSecret(btn) {
+            if (prompt('Enter password (hint: drew):') === 'drew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealOpportunity(btn) {
+            if (prompt('Enter password (hint: drewdrew):') === 'drewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+    </script>
+</body>
+
+</html>

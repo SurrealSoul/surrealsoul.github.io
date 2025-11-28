@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julian Crimson - The Disowned Son</title>
+
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 3px solid #6a0a0a;
+        }
+
+        h1 {
+            color: #a00000;
+            margin: 0;
+            font-size: 3em;
+        }
+
+        h2 {
+            color: #c79a00;
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #2b2b2b;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .character-details {
+            background-color: #383838;
+            border: 1px solid #555;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        .secret {
+            background-color: #222;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            border-left: 3px solid #a00000;
+            font-style: italic;
+            color: #ffdddd;
+        }
+
+        .back-link {
+            display: inline-block;
+            background-color: #6a0a0a;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            transition: background-color 0.2s;
+        }
+
+        .back-link:hover {
+            background-color: #8b0000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #777;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Julian Crimson (ID: A5)</h1>
+    </header>
+
+    <main>
+        <a href="cabin.html" class="back-link">← Back to Murder Mystery</a>
+
+        <div class="character-details">
+            <h2>The Disowned Son</h2>
+            <p>Cornelius's only son, cut off from the family fortune years ago. He showed up uninvited.</p>
+
+            <div class="secret">
+                <button onclick="revealSecret(this)"
+                    style="padding: 10px; background: #a00000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Secret</button>
+                <div style="display:none;">
+                    <h3>His Secret</h3>
+                    <p>He is dangerously in debt to a loan shark and was heard screaming, "I'll get what's mine, one way
+                        or another!"</p>
+                </div>
+            </div>
+
+            <h3>Background</h3>
+            <p>Julian was once the heir apparent to the Crimson fortune, but a series of bad business decisions and a
+                gambling addiction led to his father cutting him off completely five years ago. Since then, he's
+                struggled to maintain his lifestyle, resorting to increasingly desperate measures to stay afloat
+                financially.</p>
+
+            <h3>Motive</h3>
+            <p>Julian's debts to dangerous people have reached a critical point. He owes over $2 million to a loan shark
+                who has threatened his life. With his father's death, he hopes to inherit enough to pay off his debts
+                and reclaim his place in high society. His father's will was his last hope for survival.</p>
+
+            <div class="opportunity-section" style="margin-top: 30px;">
+                <button onclick="revealOpportunity(this)"
+                    style="padding: 10px; background: #c79a00; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Opportunity</button>
+                <div style="display:none;">
+                    <h3>Opportunity</h3>
+                    <p>Despite being uninvited, Julian arrived at the cabin before the storm hit. He knows the layout of
+                        the property from childhood and has been seen lurking around the study. His desperation makes
+                        him unpredictable and dangerous.</p>
+                </div>
+            </div>
+
+            
+            <h3>Alibi</h3>
+            <p>Claims he was smoking a cigarette on the back porch. He says the storm was too loud to hear anything inside.</p>
+
+            
+            <h3>Accusations</h3>
+            <ul>
+                <li>I was smoking on the porch. <strong>Officer Dunn</strong> saw me.</li>
+    <li>I saw <strong>Jack</strong> wandering around the grounds in the storm.</li>
+    <li>I saw <strong>Marco</strong> trying to get a signal on his phone by the window.</li>
+
+    <li>I noticed that <strong>Arthur Doyle</strong> was seen checking and rechecking the locks on all doors.</li>
+    <li>I noticed that <strong>Beatrice Crimson</strong> openly expressed her belief that she deserves the family fortune.</li>
+</ul>
+
+            <h3>Suspicious Behavior</h3>
+            <ul>
+                <li>Arrived uninvited and refused to leave when asked</li>
+                <li>Was heard making violent threats about getting "what's his"</li>
+                <li>Has been asking other guests about the contents of the will</li>
+                <li>Appears nervous and jumpy, constantly checking his phone for messages</li>
+                <li>Was seen near the study early in the morning before the body was discovered</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>Desperate times call for desperate measures...</p>
+    </footer>
+
+
+    <script>
+        function revealSecret(btn) {
+            if (prompt('Enter password (hint: drew):') === 'drew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealOpportunity(btn) {
+            if (prompt('Enter password (hint: drewdrew):') === 'drewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+    </script>
+</body>
+
+</html>

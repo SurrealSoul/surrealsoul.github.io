@@ -81,19 +81,22 @@
 <body>
 
     <header>
-        <h1>Professor Alistair Finch</h1>
+        <h1>Professor Alistair Finch (ID: O3)</h1>
     </header>
 
     <main>
         <a href="cabin.html" class="back-link">← Back to Murder Mystery</a>
 
         <div class="character-details">
-            <h2>The Historian</h2>
+            <h2>The Historian </h2>
             <p>An old college "friend" of Cornelius's. He's an expert on rare artifacts, which the cabin is full of.</p>
 
             <div class="secret">
-                <h3>His Secret</h3>
+                    <button onclick="revealSecret(this)" style="padding: 10px; background: #a00000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Secret</button>
+    <div style="display:none;">
+<h3>His Secret</h3>
                 <p>He believes Cornelius stole a priceless artifact from him decades ago and is here to steal it back. He was found picking the lock to the study.</p>
+    </div>
             </div>
 
             <h3>Background</h3>
@@ -102,8 +105,28 @@
             <h3>Motive</h3>
             <p>In 1987, Finch discovered what he believed to be a genuine Mesopotamian tablet during an archaeological dig. Before he could properly document it, Cornelius "borrowed" the artifact and later claimed to have purchased it from a different source. The tablet, worth millions, has been displayed in Cornelius's private collection ever since. Finch has spent decades trying to prove it was stolen from him.</p>
 
-            <h3>Opportunity</h3>
+            <div class="opportunity-section" style="margin-top: 30px;">
+    <button onclick="revealOpportunity(this)" style="padding: 10px; background: #c79a00; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Opportunity</button>
+    <div style="display:none;">
+<h3>Opportunity</h3>
             <p>As an old friend, Finch has been to the cabin many times and knows its layout well. His expertise in ancient artifacts means he knows exactly where Cornelius would hide his most valuable pieces. The cabin's collection room contains dozens of priceless items, including the disputed tablet that Finch considers rightfully his.</p>
+    </div>
+</div>
+
+            
+            <h3>Alibi</h3>
+            <p>Claims he was admiring the artifacts in the gallery. He says he lost track of time studying the Mesopotamian collection.</p>
+
+            
+            <h3>Accusations</h3>
+            <ul>
+                <li>I saw <strong>Beatrice</strong> and <strong>Zora</strong> conspiring in the library. <strong>Fiona</strong> was hiding there too.</li>
+    <li>I saw <strong>Fiona</strong> slip into the wine cellar.</li>
+    <li>I saw <strong>Antoine</strong> sharpening his knives with unusual aggression.</li>
+
+    <li>I noticed that <strong>Cassandra</strong> shows theatrical mannerisms that suggest professional acting training.</li>
+    <li>I noticed that <strong>Marco "The Shark" Varelli</strong> has been seen prowling the cabin at odd hours.</li>
+</ul>
 
             <h3>Suspicious Behavior</h3>
             <ul>
@@ -122,6 +145,25 @@
         <p>History belongs to those who write it... or steal it.</p>
     </footer>
 
+
+    <script>
+    function revealSecret(btn) {
+        if (prompt('Enter password (hint: secret):') === 'secret') {
+            btn.nextElementSibling.style.display = 'block';
+            btn.style.display = 'none';
+        } else {
+            alert('Wrong password!');
+        }
+    }
+    function revealOpportunity(btn) {
+        if (prompt('Enter password (hint: opportunity):') === 'opportunity') {
+            btn.nextElementSibling.style.display = 'block';
+            btn.style.display = 'none';
+        } else {
+            alert('Wrong password!');
+        }
+    }
+    </script>
 </body>
 </html>
 

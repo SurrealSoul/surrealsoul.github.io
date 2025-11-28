@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officer Dunn - The "Local Cop"</title>
+
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 3px solid #6a0a0a;
+        }
+
+        h1 {
+            color: #a00000;
+            margin: 0;
+            font-size: 3em;
+        }
+
+        h2 {
+            color: #c79a00;
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #2b2b2b;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .character-details {
+            background-color: #383838;
+            border: 1px solid #555;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        .secret {
+            background-color: #222;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            border-left: 3px solid #a00000;
+            font-style: italic;
+            color: #ffdddd;
+        }
+
+        .back-link {
+            display: inline-block;
+            background-color: #6a0a0a;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            transition: background-color 0.2s;
+        }
+
+        .back-link:hover {
+            background-color: #8b0000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #777;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Officer Dunn (ID: X7)</h1>
+    </header>
+
+    <main>
+        <a href="cabin.html" class="back-link">← Back to Murder Mystery</a>
+
+        <div class="character-details">
+            <h2>The "Local Cop"</h2>
+            <p>A man in a police uniform who arrived just before the storm. He claims he was checking on a distress
+                call.</p>
+
+            <div class="secret">
+                <button onclick="revealSecret(this)"
+                    style="padding: 10px; background: #a00000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Secret</button>
+                <div style="display:none;">
+                    <h3>His Secret</h3>
+                    <p>He's not a cop. He's a private investigator hired by Cornelius. He discovered that "Eleanor" is
+                        actually a wanted fraudster named Lorelei Vance, and he was planning to turn her in... for a
+                        price.</p>
+                </div>
+            </div>
+
+            <h3>Background</h3>
+            <p>Frank Dunn is a former police officer who lost his job due to allegations of corruption and evidence
+                tampering. Since then, he's worked as a private investigator, specializing in surveillance and
+                information gathering for wealthy clients who need to know what their "friends" and family are really up
+                to. His police uniform is a prop that helps him gain access to places where he wouldn't normally be
+                welcome.</p>
+
+            <h3>Motive</h3>
+            <p>Cornelius hired Dunn weeks ago to investigate several of his guests, suspecting that some of them were
+                planning something against him. Dunn was supposed to gather evidence and report back, but when he
+                learned about Cornelius's plans to cut certain people out of his will, he realized that his client's
+                death might be more profitable than his continued employment.</p>
+
+            <div class="opportunity-section" style="margin-top: 30px;">
+                <button onclick="revealOpportunity(this)"
+                    style="padding: 10px; background: #c79a00; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Opportunity</button>
+                <div style="display:none;">
+                    <h3>Opportunity</h3>
+                    <p>Dunn's false police credentials gave him immediate access to the cabin and authority that no one
+                        questioned. His investigative skills and surveillance equipment allowed him to gather detailed
+                        information about everyone's secrets and motivations. As a former cop, he also knows how to
+                        stage a crime scene and misdirect an investigation.</p>
+                </div>
+            </div>
+
+
+            <h3>Alibi</h3>
+            <p>Claims he was patrolling the perimeter. He says he was checking for any signs of forced entry.</p>
+
+
+            <h3>Accusations</h3>
+            <ul>
+                <li>I saw <strong>Julian</strong> smoking on the porch. <strong>Jack</strong> was nearby.</li>
+                <li>I saw <strong>Jack</strong> and <strong>Blake</strong> outside in the snow.</li>
+                <li>I saw <strong>Cassandra</strong> walking towards the family cemetery.</li>
+            
+    <li>I noticed that <strong>Julian Crimson</strong> arrived uninvited and refused to leave when asked.</li>
+    <li>I noticed that <strong>Cassandra</strong> seems more interested in legal matters than in mourning.</li>
+</ul>
+
+            <h3>Suspicious Behavior</h3>
+            <ul>
+                <li>His police credentials don't check out with the local department</li>
+                <li>Shows an unusual knowledge of each guest's background and secrets</li>
+                <li>Has been taking notes and photos throughout his stay</li>
+                <li>Seems more interested in observing than investigating the murder</li>
+                <li>Carries surveillance equipment not typically issued to local police</li>
+                <li>His radio doesn't seem to connect to any actual police dispatch</li>
+                <li>Was overheard making calls about "completing the contract"</li>
+                <li>Was seen handing a manila folder to Eleanor and whispering "I know everything"</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>Sometimes the law is just another disguise...</p>
+    </footer>
+
+
+    <script>
+        function revealSecret(btn) {
+            if (prompt('Enter password (hint: drew):') === 'drew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealOpportunity(btn) {
+            if (prompt('Enter password (hint: drewdrew):') === 'drewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+    </script>
+</body>
+
+</html>

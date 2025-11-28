@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleanor Crimson - The Widow</title>
+
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 3px solid #6a0a0a;
+        }
+
+        h1 {
+            color: #a00000;
+            margin: 0;
+            font-size: 3em;
+        }
+
+        h2 {
+            color: #c79a00;
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #2b2b2b;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .character-details {
+            background-color: #383838;
+            border: 1px solid #555;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        .secret {
+            background-color: #222;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            border-left: 3px solid #a00000;
+            font-style: italic;
+            color: #ffdddd;
+        }
+
+        .back-link {
+            display: inline-block;
+            background-color: #6a0a0a;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            transition: background-color 0.2s;
+        }
+
+        .back-link:hover {
+            background-color: #8b0000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #777;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Eleanor Crimson (ID: Q2)</h1>
+    </header>
+
+    <main>
+        <a href="cabin.html" class="back-link">← Back to Murder Mystery</a>
+
+        <div class="character-details">
+            <h2>The Widow</h2>
+            <p>Cornelius's young, beautiful wife. She seems devastated, but was seen arguing with him just last night.
+            </p>
+
+            <div class="secret">
+                <button onclick="revealSecret(this)"
+                    style="padding: 10px; background: #a00000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Secret</button>
+                <div style="display:none;">
+                    <h3>Her Secret</h3>
+                    <p>She is actually Lorelei Vance, a wanted con artist from Chicago. Officer Dunn recognized her and
+                        threatened to expose her. She didn't just kill Cornelius... she killed Dunn too.</p>
+                </div>
+            </div>
+
+            <h3>Background</h3>
+            <p>Eleanor married Cornelius Crimson just two years ago, much to the dismay of his family who saw her as
+                nothing more than a gold-digger. At 28, she's nearly 40 years younger than her deceased husband. Despite
+                her outward grief, there are whispers among the guests about her true feelings toward Cornelius.</p>
+
+            <h3>Motive</h3>
+            <p>The pre-nuptial agreement she signed was ironclad - she would receive nothing if they divorced or if
+                Cornelius died of natural causes. However, if he were to die under "unnatural circumstances," she would
+                inherit a substantial portion of his estate. Her secret relationship with Blake Riley, her bodyguard,
+                gives her additional motivation to secure their future together.</p>
+
+            <div class="opportunity-section" style="margin-top: 30px;">
+                <button onclick="revealOpportunity(this)"
+                    style="padding: 10px; background: #c79a00; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Opportunity</button>
+                <div style="display:none;">
+                    <h3>Opportunity</h3>
+                    <p>As his wife, Eleanor had unlimited access to Cornelius and his private study. She was one of the
+                        last people to see him alive during their heated argument the night before his death.</p>
+                </div>
+            </div>
+
+
+            <h3>Alibi</h3>
+            <p>Claims she was sleeping in the master bedroom. She says she took a sleeping pill at 10 PM and didn't wake
+                up until the scream.</p>
+
+
+            <h3>Accusations</h3>
+            <ul>
+                <li>I was arguing with Cornelius, but <strong>Blake</strong> was right outside the door.</li>
+                <li>I saw <strong>Arthur</strong> lurking in the hallway when I left the study.</li>
+                <li>I saw <strong>Beatrice</strong> heading towards the library late at night.</li>
+            
+    <li>I noticed that <strong>Mr. Silas Croft</strong> has been asking odd questions about the timeline of Cornelius's death.</li>
+    <li>I noticed that <strong>Julian Crimson</strong> arrived uninvited and refused to leave when asked.</li>
+</ul>
+
+            <h3>Suspicious Behavior</h3>
+            <ul>
+                <li>Was heard arguing loudly with Cornelius the night before his death</li>
+                <li>Has been exchanging meaningful glances with Blake Riley</li>
+                <li>Seems more concerned about the will reading than mourning her husband</li>
+                <li>Was wearing a red sequined dress the night before the murder</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>Is Eleanor the grieving widow... or a calculating killer?</p>
+    </footer>
+
+
+    <script>
+        function revealSecret(btn) {
+            if (prompt('Enter password (hint: drew):') === 'drew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealOpportunity(btn) {
+            if (prompt('Enter password (hint: drewdrew):') === 'drewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+    </script>
+</body>
+
+</html>

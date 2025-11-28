@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Silas Croft - The Family Lawyer</title>
+
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 3px solid #6a0a0a;
+        }
+
+        h1 {
+            color: #a00000;
+            margin: 0;
+            font-size: 3em;
+        }
+
+        h2 {
+            color: #c79a00;
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #2b2b2b;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .character-details {
+            background-color: #383838;
+            border: 1px solid #555;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        .secret {
+            background-color: #222;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            border-left: 3px solid #a00000;
+            font-style: italic;
+            color: #ffdddd;
+        }
+
+        .back-link {
+            display: inline-block;
+            background-color: #6a0a0a;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            transition: background-color 0.2s;
+        }
+
+        .back-link:hover {
+            background-color: #8b0000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #777;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Mr. Silas Croft (ID: J2)</h1>
+    </header>
+
+    <main>
+        <a href="cabin.html" class="back-link">← Back to Murder Mystery</a>
+
+        <div class="character-details">
+            <h2>The Family Lawyer</h2>
+            <p>The man who is here to read the will. He seems nervous and is carrying a locked briefcase.</p>
+
+            <div class="secret">
+                <button onclick="revealSecret(this)"
+                    style="padding: 10px; background: #a00000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Secret</button>
+                <div style="display:none;">
+                    <h3>His Secret</h3>
+                    <p>He's the only one who knows what's in the will. The will contains a new clause, added yesterday,
+                        that makes him the primary beneficiary.</p>
+                </div>
+            </div>
+
+            <h3>Background</h3>
+            <p>Silas Croft has been the Crimson family attorney for over 20 years, handling everything from business
+                contracts to personal legal matters. He's always been seen as trustworthy and ethical, but recent
+                financial troubles have tested his moral boundaries. He's been with Cornelius through thick and thin,
+                which apparently earned him more than just legal fees.</p>
+
+            <h3>Motive</h3>
+            <p>Yesterday, just before the gathering, Cornelius called Silas with an urgent request to add a codicil to
+                his will. In a moment of what Cornelius called "gratitude for faithful service," he made Silas the
+                primary beneficiary, cutting out most of his family. Silas now stands to inherit the bulk of the Crimson
+                fortune - but only if Cornelius dies before he can change his mind again.</p>
+
+            <div class="opportunity-section" style="margin-top: 30px;">
+                <button onclick="revealOpportunity(this)"
+                    style="padding: 10px; background: #c79a00; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Opportunity</button>
+                <div style="display:none;">
+                    <h3>Opportunity</h3>
+                    <p>As the family lawyer, Silas had private meetings with Cornelius and access to his study. He
+                        arrived at the cabin early to "prepare for the reading" and was seen having intense
+                        conversations with Cornelius throughout the evening. His legal knowledge would also help him
+                        understand exactly how to ensure the will couldn't be contested.</p>
+                </div>
+            </div>
+
+            
+            <h3>Alibi</h3>
+            <p>Claims he was preparing documents in the guest study. He says he needed to have the will ready for the morning reading.</p>
+
+            
+            <h3>Accusations</h3>
+            <ul>
+                <li>I heard a commotion and saw <strong>Evelyn</strong> and the <strong>Twins</strong>. <strong>Cassandra</strong> was there too.</li>
+    <li>I saw <strong>Chloe</strong> trying to open the safe.</li>
+    <li>I saw <strong>Marco</strong> arguing with <strong>Fiona</strong> in the cellar.</li>
+
+    <li>I noticed that <strong>Arthur Doyle</strong> was seen checking and rechecking the locks on all doors.</li>
+    <li>I noticed that <strong>Madam Zora</strong> shows an unusual knowledge of the family's private affairs.</li>
+</ul>
+
+            <h3>Suspicious Behavior</h3>
+            <ul>
+                <li>Clutches his briefcase protectively and won't let anyone near it</li>
+                <li>Seems unusually nervous for someone just doing their job</li>
+                <li>Has been evasive when asked about the contents of the will</li>
+                <li>Was overheard making a phone call about "securing his future"</li>
+                <li>Insists on reading the will immediately, despite the tragedy</li>
+                <li>Has been asking odd questions about the timeline of Cornelius's death</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>Legal ethics are only as strong as the lawyer who upholds them...</p>
+    </footer>
+
+
+    <script>
+        function revealSecret(btn) {
+            if (prompt('Enter password (hint: drew):') === 'drew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealOpportunity(btn) {
+            if (prompt('Enter password (hint: drewdrew):') === 'drewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+    </script>
+</body>
+
+</html>

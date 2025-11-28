@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cassandra - The "Other" Widow</title>
+
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 3px solid #6a0a0a;
+        }
+
+        h1 {
+            color: #a00000;
+            margin: 0;
+            font-size: 3em;
+        }
+
+        h2 {
+            color: #c79a00;
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #2b2b2b;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .character-details {
+            background-color: #383838;
+            border: 1px solid #555;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        .secret {
+            background-color: #222;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            border-left: 3px solid #a00000;
+            font-style: italic;
+            color: #ffdddd;
+        }
+
+        .back-link {
+            display: inline-block;
+            background-color: #6a0a0a;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            transition: background-color 0.2s;
+        }
+
+        .back-link:hover {
+            background-color: #8b0000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #777;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Cassandra (ID: B6)</h1>
+    </header>
+
+    <main>
+        <a href="cabin.html" class="back-link">← Back to Murder Mystery</a>
+
+        <div class="character-details">
+            <h2>The "Other" Widow</h2>
+            <p>A mysterious woman in black who claims to be Cornelius's *first* wife, who everyone thought was dead.</p>
+
+            <div class="secret">
+                <button onclick="revealSecret(this)"
+                    style="padding: 10px; background: #a00000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Secret</button>
+                <div style="display:none;">
+                    <h3>Her Secret</h3>
+                    <p>She's not his first wife. She's an actress hired by Julian (the son) to contest the will and
+                        create chaos.</p>
+                </div>
+            </div>
+
+            <h3>Background</h3>
+            <p>Cassandra Noir is a struggling actress from Los Angeles who specializes in dramatic roles and has a
+                talent for adopting different personas. When Julian Crimson contacted her through a seedy talent agency,
+                she was immediately intrigued by the role of a lifetime: playing a dead woman who has returned from the
+                grave to claim what's rightfully hers.</p>
+
+            <h3>Motive</h3>
+            <p>Cassandra was hired by Julian to create confusion and legal complications around Cornelius's will. If she
+                could successfully pose as his first wife, she could contest the will and potentially delay its
+                execution for years, giving Julian time to find another solution to his debt problems. She's been paid
+                handsomely for her performance, but the plan requires Cornelius to be dead for it to work.</p>
+
+            <div class="opportunity-section" style="margin-top: 30px;">
+                <button onclick="revealOpportunity(this)"
+                    style="padding: 10px; background: #c79a00; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Opportunity</button>
+                <div style="display:none;">
+                    <h3>Opportunity</h3>
+                    <p>As part of her role, Cassandra arrived at the cabin with forged documentation and a detailed
+                        backstory about her "marriage" to Cornelius. Her acting skills and research into the family's
+                        history make her convincing enough to fool most people, at least temporarily. Her partnership
+                        with Julian gives her inside knowledge of family dynamics and potential weaknesses to exploit.
+                    </p>
+                </div>
+            </div>
+
+            
+            <h3>Alibi</h3>
+            <p>Claims she was visiting Cornelius's grave. She says she wanted to pay her respects before the storm got worse.</p>
+
+            
+            <h3>Accusations</h3>
+            <ul>
+                <li>I saw <strong>Silas</strong> peeking out of his room at <strong>Evelyn</strong>.</li>
+    <li>I saw <strong>Jack</strong> watching me at the grave.</li>
+    <li>I saw <strong>Officer Dunn</strong> trying the front door handle.</li>
+
+    <li>I noticed that <strong>Julian Crimson</strong> has been asking other guests about the contents of the will.</li>
+    <li>I noticed that <strong>Officer Dunn</strong> has been taking notes and photos throughout his stay.</li>
+</ul>
+
+            <h3>Suspicious Behavior</h3>
+            <ul>
+                <li>Her story about being Cornelius's first wife has inconsistencies</li>
+                <li>She seems to be performing grief rather than genuinely feeling it</li>
+                <li>Has been seen coordinating with Julian when they think no one is watching</li>
+                <li>Her "memories" of Cornelius don't quite match up with known facts</li>
+                <li>Carries what appear to be forged marriage documents</li>
+                <li>Shows theatrical mannerisms that suggest professional acting training</li>
+                <li>Seems more interested in legal matters than in mourning</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>All the world's a stage... and some performances are worth killing for.</p>
+    </footer>
+
+
+    <script>
+        function revealSecret(btn) {
+            if (prompt('Enter password (hint: drew):') === 'drew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealOpportunity(btn) {
+            if (prompt('Enter password (hint: drewdrew):') === 'drewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+    </script>
+</body>
+
+</html>
