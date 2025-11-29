@@ -145,38 +145,43 @@
                 a voice memo.</p>
 
 
-            
+
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)"
+                    style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;"">Reveal Suspicious Behavior</button>
+                <div style=" display:none;">
+                    <h3>Suspicious Behavior</h3>
+                    <ul>
+                        <li>Claims to be paying respects despite being a known enemy of Cornelius</li>
+                        <li>Has been seen prowling the cabin at odd hours</li>
+                        <li>Carries lock-picking tools disguised as business accessories</li>
+                        <li>Was caught trying to access Cornelius's home office</li>
+                        <li>Shows no genuine grief about Cornelius's death</li>
+                        <li>Has been asking pointed questions about business documents</li>
+                        <li>Was overheard promising Captain Jack more money for "additional services"</li>
+                    </ul>
+            </div>
+        </div>
+
+
             <div class="accusations-section" style="margin-top: 30px;">
-                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <button onclick="revealAccusations(this)"
+                    style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Accusations</button>
                 <div style="display:none;">
                     <h3>Accusations</h3>
-            <ul>
-                <li>I went to the cellar. <strong>Fiona</strong> was already there drinking.</li>
-                <li>I saw <strong>Julian</strong> trying to pick the lock on the liquor cabinet.</li>
-                <li>I saw <strong>Silas</strong> burning papers in the fireplace.</li>
+                    <ul>
+                        <li>I went to the cellar. <strong>Fiona</strong> was already there drinking.</li>
+                        <li>I saw <strong>Julian</strong> trying to pick the lock on the liquor cabinet.</li>
+                        <li>I saw <strong>Silas</strong> burning papers in the fireplace.</li>
 
-                <li>I noticed that <strong>Beatrice Crimson</strong> carries a small black bag filled with mysterious
-                    vials and bottles.</li>
-                <li>I noticed that <strong>Julian Crimson</strong> has been asking other guests about the contents of
-                    the will.</li>
-            </ul>
-                </div>
-            </div>
-
-            
-            <div class="suspicious-section" style="margin-top: 30px;">
-                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
-                <div style="display:none;">
-                    <h3>Suspicious Behavior</h3>
-            <ul>
-                <li>Claims to be paying respects despite being a known enemy of Cornelius</li>
-                <li>Has been seen prowling the cabin at odd hours</li>
-                <li>Carries lock-picking tools disguised as business accessories</li>
-                <li>Was caught trying to access Cornelius's home office</li>
-                <li>Shows no genuine grief about Cornelius's death</li>
-                <li>Has been asking pointed questions about business documents</li>
-                <li>Was overheard promising Captain Jack more money for "additional services"</li>
-            </ul>
+                        <li>I noticed that <strong>Beatrice Crimson</strong> carries a small black bag filled with
+                            mysterious
+                            vials and bottles.</li>
+                        <li>I noticed that <strong>Julian Crimson</strong> has been asking other guests about the
+                            contents of
+                            the will.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -204,7 +209,7 @@
                 alert('Wrong password!');
             }
         }
-    
+
         function revealAccusations(btn) {
             if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
                 btn.nextElementSibling.style.display = 'block';
@@ -221,7 +226,7 @@
                 alert('Wrong password!');
             }
         }
-</script>
+    </script>
 </body>
 
 </html>

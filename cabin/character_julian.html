@@ -142,36 +142,41 @@
                 inside.</p>
 
 
-            
+
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)"
+                    style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;"">Reveal Suspicious Behavior</button>
+                <div style=" display:none;">
+                    <h3>Suspicious Behavior</h3>
+                    <ul>
+                        <li>Arrived uninvited and refused to leave when asked</li>
+                        <li>Was heard making violent threats about getting "what's his"</li>
+                        <li>Has been asking other guests about the contents of the will</li>
+                        <li>Appears nervous and jumpy, constantly checking his phone for messages</li>
+                        <li>Was seen near the study early in the morning before the body was discovered</li>
+                    </ul>
+            </div>
+        </div>
+
+
             <div class="accusations-section" style="margin-top: 30px;">
-                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <button onclick="revealAccusations(this)"
+                    style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Accusations</button>
                 <div style="display:none;">
                     <h3>Accusations</h3>
-            <ul>
-                <li>I was smoking on the porch. <strong>Officer Dunn</strong> saw me.</li>
-                <li>I saw <strong>Jack</strong> wandering around the grounds in the storm.</li>
-                <li>I saw <strong>Marco</strong> trying to get a signal on his phone by the window.</li>
+                    <ul>
+                        <li>I was smoking on the porch. <strong>Officer Dunn</strong> saw me.</li>
+                        <li>I saw <strong>Jack</strong> wandering around the grounds in the storm.</li>
+                        <li>I saw <strong>Marco</strong> trying to get a signal on his phone by the window.</li>
 
-                <li>I noticed that <strong>Arthur Doyle</strong> was seen checking and rechecking the locks on all
-                    doors.</li>
-                <li>I noticed that <strong>Beatrice Crimson</strong> openly expressed her belief that she deserves the
-                    family fortune.</li>
-            </ul>
-                </div>
-            </div>
-
-            
-            <div class="suspicious-section" style="margin-top: 30px;">
-                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
-                <div style="display:none;">
-                    <h3>Suspicious Behavior</h3>
-            <ul>
-                <li>Arrived uninvited and refused to leave when asked</li>
-                <li>Was heard making violent threats about getting "what's his"</li>
-                <li>Has been asking other guests about the contents of the will</li>
-                <li>Appears nervous and jumpy, constantly checking his phone for messages</li>
-                <li>Was seen near the study early in the morning before the body was discovered</li>
-            </ul>
+                        <li>I noticed that <strong>Arthur Doyle</strong> was seen checking and rechecking the locks on
+                            all
+                            doors.</li>
+                        <li>I noticed that <strong>Beatrice Crimson</strong> openly expressed her belief that she
+                            deserves the
+                            family fortune.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -199,7 +204,7 @@
                 alert('Wrong password!');
             }
         }
-    
+
         function revealAccusations(btn) {
             if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
                 btn.nextElementSibling.style.display = 'block';
@@ -216,7 +221,7 @@
                 alert('Wrong password!');
             }
         }
-</script>
+    </script>
 </body>
 
 </html>

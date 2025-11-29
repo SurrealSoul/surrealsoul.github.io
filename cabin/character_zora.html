@@ -144,39 +144,44 @@
                 night.</p>
 
 
-            
+
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)"
+                    style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;"">Reveal Suspicious Behavior</button>
+                <div style=" display:none;">
+                    <h3>Suspicious Behavior</h3>
+                    <ul>
+                        <li>Her "predictions" seemed designed to frighten and manipulate rather than entertain</li>
+                        <li>Has been seen whispering secretly with Beatrice Crimson</li>
+                        <li>Carries a bag filled with mysterious powders and herbs for her "rituals"</li>
+                        <li>Shows an unusual knowledge of the family's private affairs</li>
+                        <li>Was overheard practicing different accents when she thought she was alone</li>
+                        <li>Her crystal ball readings have been suspiciously specific and targeted</li>
+                        <li>Seems more interested in gathering information than providing entertainment</li>
+                    </ul>
+            </div>
+        </div>
+
+
             <div class="accusations-section" style="margin-top: 30px;">
-                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <button onclick="revealAccusations(this)"
+                    style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Accusations</button>
                 <div style="display:none;">
                     <h3>Accusations</h3>
-            <ul>
-                <li>I was reading cards for <strong>Beatrice</strong> in the library. <strong>Alistair</strong> was
-                    watching us.</li>
-                <li>I saw <strong>The Twins</strong> wandering the halls holding hands.</li>
-                <li>I felt a dark energy coming from <strong>Silas</strong>'s room.</li>
+                    <ul>
+                        <li>I was reading cards for <strong>Beatrice</strong> in the library. <strong>Alistair</strong>
+                            was
+                            watching us.</li>
+                        <li>I saw <strong>The Twins</strong> wandering the halls holding hands.</li>
+                        <li>I felt a dark energy coming from <strong>Silas</strong>'s room.</li>
 
-                <li>I noticed that <strong>Chloe Bishop</strong> was overheard crying on the phone about "not having any
-                    other choice".</li>
-                <li>I noticed that <strong>Cassandra</strong> her story about being Cornelius's first wife has
-                    inconsistencies.</li>
-            </ul>
-                </div>
-            </div>
-
-            
-            <div class="suspicious-section" style="margin-top: 30px;">
-                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
-                <div style="display:none;">
-                    <h3>Suspicious Behavior</h3>
-            <ul>
-                <li>Her "predictions" seemed designed to frighten and manipulate rather than entertain</li>
-                <li>Has been seen whispering secretly with Beatrice Crimson</li>
-                <li>Carries a bag filled with mysterious powders and herbs for her "rituals"</li>
-                <li>Shows an unusual knowledge of the family's private affairs</li>
-                <li>Was overheard practicing different accents when she thought she was alone</li>
-                <li>Her crystal ball readings have been suspiciously specific and targeted</li>
-                <li>Seems more interested in gathering information than providing entertainment</li>
-            </ul>
+                        <li>I noticed that <strong>Chloe Bishop</strong> was overheard crying on the phone about "not
+                            having any
+                            other choice".</li>
+                        <li>I noticed that <strong>Cassandra</strong> her story about being Cornelius's first wife has
+                            inconsistencies.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -204,7 +209,7 @@
                 alert('Wrong password!');
             }
         }
-    
+
         function revealAccusations(btn) {
             if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
                 btn.nextElementSibling.style.display = 'block';
@@ -221,7 +226,7 @@
                 alert('Wrong password!');
             }
         }
-</script>
+    </script>
 </body>
 
 </html>

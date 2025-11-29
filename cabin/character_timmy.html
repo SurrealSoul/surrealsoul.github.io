@@ -143,40 +143,47 @@
             <p>Claims he was playing video games in his room. He says he had his noise-canceling headphones on.</p>
 
 
-            
+
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)"
+                    style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;"">Reveal Suspicious Behavior</button>
+                <div style=" display:none;">
+                    <h3>Suspicious Behavior</h3>
+                    <ul>
+                        <li>Was seen "accidentally" testing door handles and window latches</li>
+                        <li>Has been observed "clumsily" examining the security system</li>
+                        <li>Carries lock-picking tools disguised as everyday items</li>
+                        <li>His "accidents" always seem to happen near valuable items or important documents</li>
+                        <li>Shows an unusual knowledge of the cabin's layout for someone who "rarely visits"</li>
+                        <li>Was caught practicing lock-picking on the kitchen pantry</li>
+                        <li>His fingerprints are notably absent from surfaces where they should be (he wears invisible
+                            gloves)
+                        </li>
+                    </ul>
+            </div>
+        </div>
+
+
             <div class="accusations-section" style="margin-top: 30px;">
-                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <button onclick="revealAccusations(this)"
+                    style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Accusations</button>
                 <div style="display:none;">
                     <h3>Accusations</h3>
-            <ul>
-                <li><strong>Antoine</strong> chased me with a knife! <strong>Genevieve</strong> saw it!</li>
-                <li>I saw <strong>The Twins</strong> whispering to <strong>Dr. Reed</strong>.</li>
-                <li>I went back to the kitchen at 3:00 AM for a snack. <strong>Antoine</strong> wasn't there, and the
-                    ovens were cold.</li>
+                    <ul>
+                        <li><strong>Antoine</strong> chased me with a knife! <strong>Genevieve</strong> saw it!</li>
+                        <li>I saw <strong>The Twins</strong> whispering to <strong>Dr. Reed</strong>.</li>
+                        <li>I went back to the kitchen at 3:00 AM for a snack. <strong>Antoine</strong> wasn't there,
+                            and the
+                            ovens were cold.</li>
 
-                <li>I noticed that <strong>Marco "The Shark" Varelli</strong> claims to be paying respects despite being
-                    a known enemy of Cornelius.</li>
-                <li>I noticed that <strong>Cassandra</strong> shows theatrical mannerisms that suggest professional
-                    acting training.</li>
-            </ul>
-                </div>
-            </div>
-
-            
-            <div class="suspicious-section" style="margin-top: 30px;">
-                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
-                <div style="display:none;">
-                    <h3>Suspicious Behavior</h3>
-            <ul>
-                <li>Was seen "accidentally" testing door handles and window latches</li>
-                <li>Has been observed "clumsily" examining the security system</li>
-                <li>Carries lock-picking tools disguised as everyday items</li>
-                <li>His "accidents" always seem to happen near valuable items or important documents</li>
-                <li>Shows an unusual knowledge of the cabin's layout for someone who "rarely visits"</li>
-                <li>Was caught practicing lock-picking on the kitchen pantry</li>
-                <li>His fingerprints are notably absent from surfaces where they should be (he wears invisible gloves)
-                </li>
-            </ul>
+                        <li>I noticed that <strong>Marco "The Shark" Varelli</strong> claims to be paying respects
+                            despite being
+                            a known enemy of Cornelius.</li>
+                        <li>I noticed that <strong>Cassandra</strong> shows theatrical mannerisms that suggest
+                            professional
+                            acting training.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -204,7 +211,7 @@
                 alert('Wrong password!');
             }
         }
-    
+
         function revealAccusations(btn) {
             if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
                 btn.nextElementSibling.style.display = 'block';
@@ -221,7 +228,7 @@
                 alert('Wrong password!');
             }
         }
-</script>
+    </script>
 </body>
 
 </html>

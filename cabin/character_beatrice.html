@@ -142,36 +142,41 @@
             <p>Claims she was reading in the library. She says she fell asleep in the armchair around 2 AM.</p>
 
 
-            
+
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)"
+                    style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;"">Reveal Suspicious Behavior</button>
+                <div style=" display:none;">
+                    <h3>Suspicious Behavior</h3>
+                    <ul>
+                        <li>Openly expressed her belief that she deserves the family fortune</li>
+                        <li>Has made veiled threats about Cornelius getting his "just desserts"</li>
+                        <li>Was the last person seen leaving the study before the body was found</li>
+                        <li>Carries a small black bag filled with mysterious vials and bottles</li>
+                        <li>Has been unusually calm about her brother's death</li>
+                        <li>Was overheard discussing "exotic spider venoms" with Madam Zora</li>
+                    </ul>
+            </div>
+        </div>
+
+
             <div class="accusations-section" style="margin-top: 30px;">
-                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <button onclick="revealAccusations(this)"
+                    style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Accusations</button>
                 <div style="display:none;">
                     <h3>Accusations</h3>
-            <ul>
-                <li>I was in the library. <strong>Zora</strong> was with me.</li>
-                <li>I saw <strong>Alistair</strong> watching us from the doorway.</li>
-                <li>I saw <strong>Evelyn</strong> rushing down the hall looking pale.</li>
+                    <ul>
+                        <li>I was in the library. <strong>Zora</strong> was with me.</li>
+                        <li>I saw <strong>Alistair</strong> watching us from the doorway.</li>
+                        <li>I saw <strong>Evelyn</strong> rushing down the hall looking pale.</li>
 
-                <li>I noticed that <strong>"Captain" Jack</strong> was seen accepting money from Marco Varelli.</li>
-                <li>I noticed that <strong>Dr. Evelyn Reed</strong> has been avoiding eye contact with other guests.
-                </li>
-            </ul>
-                </div>
-            </div>
-
-            
-            <div class="suspicious-section" style="margin-top: 30px;">
-                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
-                <div style="display:none;">
-                    <h3>Suspicious Behavior</h3>
-            <ul>
-                <li>Openly expressed her belief that she deserves the family fortune</li>
-                <li>Has made veiled threats about Cornelius getting his "just desserts"</li>
-                <li>Was the last person seen leaving the study before the body was found</li>
-                <li>Carries a small black bag filled with mysterious vials and bottles</li>
-                <li>Has been unusually calm about her brother's death</li>
-                <li>Was overheard discussing "exotic spider venoms" with Madam Zora</li>
-            </ul>
+                        <li>I noticed that <strong>"Captain" Jack</strong> was seen accepting money from Marco Varelli.
+                        </li>
+                        <li>I noticed that <strong>Dr. Evelyn Reed</strong> has been avoiding eye contact with other
+                            guests.
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -199,7 +204,7 @@
                 alert('Wrong password!');
             }
         }
-    
+
         function revealAccusations(btn) {
             if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
                 btn.nextElementSibling.style.display = 'block';
@@ -216,7 +221,7 @@
                 alert('Wrong password!');
             }
         }
-</script>
+    </script>
 </body>
 
 </html>

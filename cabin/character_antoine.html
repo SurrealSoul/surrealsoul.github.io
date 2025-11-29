@@ -146,38 +146,43 @@
                 this drafty cabin.</p>
 
 
-            
+
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)"
+                    style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;"">Reveal Suspicious Behavior</button>
+                <div style=" display:none;">
+                    <h3>Suspicious Behavior</h3>
+                    <ul>
+                        <li>Has been muttering angrily in French while cooking</li>
+                        <li>Was seen sharpening his knives obsessively</li>
+                        <li>Threw a violent tantrum when the fresh ingredients didn't arrive</li>
+                        <li>Has been asking specific questions about who will eat what dishes</li>
+                        <li>Was overheard saying "Some people deserve to choke on their words"</li>
+                        <li>His knife set is missing one blade - a small, precise paring knife</li>
+                        <li>Seems unusually interested in mushroom varieties, including poisonous ones</li>
+                    </ul>
+            </div>
+        </div>
+
+
             <div class="accusations-section" style="margin-top: 30px;">
-                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <button onclick="revealAccusations(this)"
+                    style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Accusations</button>
                 <div style="display:none;">
                     <h3>Accusations</h3>
-            <ul>
-                <li>I was in the kitchen. <strong>Timmy</strong> tried to steal a tart.</li>
-                <li>I saw <strong>Genevieve</strong> running from the kitchen.</li>
-                <li>I saw <strong>The Twins</strong> staring at the knife block.</li>
+                    <ul>
+                        <li>I was in the kitchen. <strong>Timmy</strong> tried to steal a tart.</li>
+                        <li>I saw <strong>Genevieve</strong> running from the kitchen.</li>
+                        <li>I saw <strong>The Twins</strong> staring at the knife block.</li>
 
-                <li>I noticed that <strong>Timmy Crimson</strong> his "accidents" always seem to happen near valuable
-                    items or important documents.</li>
-                <li>I noticed that <strong>Beatrice Crimson</strong> carries a small black bag filled with mysterious
-                    vials and bottles.</li>
-            </ul>
-                </div>
-            </div>
-
-            
-            <div class="suspicious-section" style="margin-top: 30px;">
-                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
-                <div style="display:none;">
-                    <h3>Suspicious Behavior</h3>
-            <ul>
-                <li>Has been muttering angrily in French while cooking</li>
-                <li>Was seen sharpening his knives obsessively</li>
-                <li>Threw a violent tantrum when the fresh ingredients didn't arrive</li>
-                <li>Has been asking specific questions about who will eat what dishes</li>
-                <li>Was overheard saying "Some people deserve to choke on their words"</li>
-                <li>His knife set is missing one blade - a small, precise paring knife</li>
-                <li>Seems unusually interested in mushroom varieties, including poisonous ones</li>
-            </ul>
+                        <li>I noticed that <strong>Timmy Crimson</strong> his "accidents" always seem to happen near
+                            valuable
+                            items or important documents.</li>
+                        <li>I noticed that <strong>Beatrice Crimson</strong> carries a small black bag filled with
+                            mysterious
+                            vials and bottles.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -205,7 +210,7 @@
                 alert('Wrong password!');
             }
         }
-    
+
         function revealAccusations(btn) {
             if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
                 btn.nextElementSibling.style.display = 'block';
@@ -222,7 +227,7 @@
                 alert('Wrong password!');
             }
         }
-</script>
+    </script>
 </body>
 
 </html>
