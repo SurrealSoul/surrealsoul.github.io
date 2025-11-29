@@ -96,7 +96,7 @@
     </header>
 
     <main>
-        <a href="cabin.html" class="back-link">← Back to Murder Mystery</a>
+        <a href="main.html" class="back-link">← Back to Murder Mystery</a>
 
         <div class="character-details">
             <h2>The Personal Physician</h2>
@@ -138,22 +138,35 @@
                 </div>
             </div>
 
-            
+
             <h3>Alibi</h3>
-            <p>Claims she was reviewing medical records in her room. She says she was preparing a case study on Cornelius's condition.</p>
+            <p>Claims she was reviewing medical records in her room. She says she was preparing a case study on
+                Cornelius's condition.</p>
+
 
             
-            <h3>Accusations</h3>
+            <div class="accusations-section" style="margin-top: 30px;">
+                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <div style="display:none;">
+                    <h3>Accusations</h3>
             <ul>
-                <li>I bumped into the <strong>Twins</strong> in the dark. It was terrifying. <strong>Silas</strong> opened his door.</li>
-    <li>I saw <strong>Beatrice</strong> mixing something in a tea cup.</li>
-    <li>I saw <strong>Timmy</strong> hiding under a table.</li>
+                <li>I bumped into the <strong>Twins</strong> in the dark. It was terrifying. <strong>Silas</strong>
+                    opened his door.</li>
+                <li>I saw <strong>Beatrice</strong> mixing something in a tea cup.</li>
+                <li>I saw <strong>Timmy</strong> hiding under a table.</li>
 
-    <li>I noticed that <strong>Genevieve</strong> was seen lingering outside Cornelius's study, apparently gathering courage.</li>
-    <li>I noticed that <strong>Blake Riley</strong> shows no genuine grief about Cornelius's death.</li>
-</ul>
+                <li>I noticed that <strong>Genevieve</strong> was seen lingering outside Cornelius's study, apparently
+                    gathering courage.</li>
+                <li>I noticed that <strong>Blake Riley</strong> shows no genuine grief about Cornelius's death.</li>
+            </ul>
+                </div>
+            </div>
 
-            <h3>Suspicious Behavior</h3>
+            
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
+                <div style="display:none;">
+                    <h3>Suspicious Behavior</h3>
             <ul>
                 <li>Her medical bag was found to be missing a vial of poison</li>
                 <li>She's been extremely nervous and fidgety since arriving at the cabin</li>
@@ -162,6 +175,8 @@
                 <li>Claims she can't perform an autopsy due to "lack of proper equipment"</li>
                 <li>Was overheard on a phone call saying "it's finally over"</li>
             </ul>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -187,7 +202,24 @@
                 alert('Wrong password!');
             }
         }
-    </script>
+    
+        function revealAccusations(btn) {
+            if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealSuspicious(btn) {
+            if (prompt('Enter password (hint: drewdrewdrewdrew):') === 'drewdrewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+</script>
 </body>
 
 </html>

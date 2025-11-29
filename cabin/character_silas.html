@@ -96,7 +96,7 @@
     </header>
 
     <main>
-        <a href="cabin.html" class="back-link">← Back to Murder Mystery</a>
+        <a href="main.html" class="back-link">← Back to Murder Mystery</a>
 
         <div class="character-details">
             <h2>The Family Lawyer</h2>
@@ -138,22 +138,36 @@
                 </div>
             </div>
 
-            
+
             <h3>Alibi</h3>
-            <p>Claims he was preparing documents in the guest study. He says he needed to have the will ready for the morning reading.</p>
+            <p>Claims he was preparing documents in the guest study. He says he needed to have the will ready for the
+                morning reading.</p>
+
 
             
-            <h3>Accusations</h3>
+            <div class="accusations-section" style="margin-top: 30px;">
+                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <div style="display:none;">
+                    <h3>Accusations</h3>
             <ul>
-                <li>I heard a commotion and saw <strong>Evelyn</strong> and the <strong>Twins</strong>. <strong>Cassandra</strong> was there too.</li>
-    <li>I saw <strong>Chloe</strong> trying to open the safe.</li>
-    <li>I saw <strong>Marco</strong> arguing with <strong>Fiona</strong> in the cellar.</li>
+                <li>I heard a commotion and saw <strong>Evelyn</strong> and the <strong>Twins</strong>.
+                    <strong>Cassandra</strong> was there too.</li>
+                <li>I saw <strong>Chloe</strong> trying to open the safe.</li>
+                <li>I saw <strong>Marco</strong> arguing with <strong>Fiona</strong> in the cellar.</li>
 
-    <li>I noticed that <strong>Arthur Doyle</strong> was seen checking and rechecking the locks on all doors.</li>
-    <li>I noticed that <strong>Madam Zora</strong> shows an unusual knowledge of the family's private affairs.</li>
-</ul>
+                <li>I noticed that <strong>Arthur Doyle</strong> was seen checking and rechecking the locks on all
+                    doors.</li>
+                <li>I noticed that <strong>Madam Zora</strong> shows an unusual knowledge of the family's private
+                    affairs.</li>
+            </ul>
+                </div>
+            </div>
 
-            <h3>Suspicious Behavior</h3>
+            
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
+                <div style="display:none;">
+                    <h3>Suspicious Behavior</h3>
             <ul>
                 <li>Clutches his briefcase protectively and won't let anyone near it</li>
                 <li>Seems unusually nervous for someone just doing their job</li>
@@ -162,6 +176,8 @@
                 <li>Insists on reading the will immediately, despite the tragedy</li>
                 <li>Has been asking odd questions about the timeline of Cornelius's death</li>
             </ul>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -187,7 +203,24 @@
                 alert('Wrong password!');
             }
         }
-    </script>
+    
+        function revealAccusations(btn) {
+            if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealSuspicious(btn) {
+            if (prompt('Enter password (hint: drewdrewdrewdrew):') === 'drewdrewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+</script>
 </body>
 
 </html>

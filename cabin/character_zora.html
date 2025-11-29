@@ -96,7 +96,7 @@
     </header>
 
     <main>
-        <a href="cabin.html" class="back-link">← Back to Murder Mystery</a>
+        <a href="main.html" class="back-link">← Back to Murder Mystery</a>
 
         <div class="character-details">
             <h2>The Fortune Teller</h2>
@@ -138,22 +138,36 @@
                 </div>
             </div>
 
-            
+
             <h3>Alibi</h3>
-            <p>Claims she was meditating in the conservatory. She says the spirits were particularly restless that night.</p>
+            <p>Claims she was meditating in the conservatory. She says the spirits were particularly restless that
+                night.</p>
+
 
             
-            <h3>Accusations</h3>
+            <div class="accusations-section" style="margin-top: 30px;">
+                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <div style="display:none;">
+                    <h3>Accusations</h3>
             <ul>
-                <li>I was reading cards for <strong>Beatrice</strong> in the library. <strong>Alistair</strong> was watching us.</li>
-    <li>I saw <strong>The Twins</strong> wandering the halls holding hands.</li>
-    <li>I felt a dark energy coming from <strong>Silas</strong>'s room.</li>
+                <li>I was reading cards for <strong>Beatrice</strong> in the library. <strong>Alistair</strong> was
+                    watching us.</li>
+                <li>I saw <strong>The Twins</strong> wandering the halls holding hands.</li>
+                <li>I felt a dark energy coming from <strong>Silas</strong>'s room.</li>
 
-    <li>I noticed that <strong>Chloe Bishop</strong> was overheard crying on the phone about "not having any other choice".</li>
-    <li>I noticed that <strong>Cassandra</strong> her story about being Cornelius's first wife has inconsistencies.</li>
-</ul>
+                <li>I noticed that <strong>Chloe Bishop</strong> was overheard crying on the phone about "not having any
+                    other choice".</li>
+                <li>I noticed that <strong>Cassandra</strong> her story about being Cornelius's first wife has
+                    inconsistencies.</li>
+            </ul>
+                </div>
+            </div>
 
-            <h3>Suspicious Behavior</h3>
+            
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
+                <div style="display:none;">
+                    <h3>Suspicious Behavior</h3>
             <ul>
                 <li>Her "predictions" seemed designed to frighten and manipulate rather than entertain</li>
                 <li>Has been seen whispering secretly with Beatrice Crimson</li>
@@ -163,6 +177,8 @@
                 <li>Her crystal ball readings have been suspiciously specific and targeted</li>
                 <li>Seems more interested in gathering information than providing entertainment</li>
             </ul>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -188,7 +204,24 @@
                 alert('Wrong password!');
             }
         }
-    </script>
+    
+        function revealAccusations(btn) {
+            if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealSuspicious(btn) {
+            if (prompt('Enter password (hint: drewdrewdrewdrew):') === 'drewdrewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+</script>
 </body>
 
 </html>

@@ -96,7 +96,7 @@
     </header>
 
     <main>
-        <a href="cabin.html" class="back-link">← Back to Murder Mystery</a>
+        <a href="main.html" class="back-link">← Back to Murder Mystery</a>
 
         <div class="character-details">
             <h2>The "Other" Widow</h2>
@@ -139,22 +139,35 @@
                 </div>
             </div>
 
-            
+
             <h3>Alibi</h3>
-            <p>Claims she was visiting Cornelius's grave. She says she wanted to pay her respects before the storm got worse.</p>
+            <p>Claims she was visiting Cornelius's grave. She says she wanted to pay her respects before the storm got
+                worse.</p>
+
 
             
-            <h3>Accusations</h3>
+            <div class="accusations-section" style="margin-top: 30px;">
+                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <div style="display:none;">
+                    <h3>Accusations</h3>
             <ul>
                 <li>I saw <strong>Silas</strong> peeking out of his room at <strong>Evelyn</strong>.</li>
-    <li>I saw <strong>Jack</strong> watching me at the grave.</li>
-    <li>I saw <strong>Officer Dunn</strong> trying the front door handle.</li>
+                <li>I saw <strong>Jack</strong> watching me at the grave.</li>
+                <li>I saw <strong>Officer Dunn</strong> trying the front door handle.</li>
 
-    <li>I noticed that <strong>Julian Crimson</strong> has been asking other guests about the contents of the will.</li>
-    <li>I noticed that <strong>Officer Dunn</strong> has been taking notes and photos throughout his stay.</li>
-</ul>
+                <li>I noticed that <strong>Julian Crimson</strong> has been asking other guests about the contents of
+                    the will.</li>
+                <li>I noticed that <strong>Officer Dunn</strong> has been taking notes and photos throughout his stay.
+                </li>
+            </ul>
+                </div>
+            </div>
 
-            <h3>Suspicious Behavior</h3>
+            
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
+                <div style="display:none;">
+                    <h3>Suspicious Behavior</h3>
             <ul>
                 <li>Her story about being Cornelius's first wife has inconsistencies</li>
                 <li>She seems to be performing grief rather than genuinely feeling it</li>
@@ -164,6 +177,8 @@
                 <li>Shows theatrical mannerisms that suggest professional acting training</li>
                 <li>Seems more interested in legal matters than in mourning</li>
             </ul>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -189,7 +204,24 @@
                 alert('Wrong password!');
             }
         }
-    </script>
+    
+        function revealAccusations(btn) {
+            if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealSuspicious(btn) {
+            if (prompt('Enter password (hint: drewdrewdrewdrew):') === 'drewdrewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+</script>
 </body>
 
 </html>

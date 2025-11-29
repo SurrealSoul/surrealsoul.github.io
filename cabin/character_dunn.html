@@ -96,7 +96,7 @@
     </header>
 
     <main>
-        <a href="cabin.html" class="back-link">← Back to Murder Mystery</a>
+        <a href="main.html" class="back-link">← Back to Murder Mystery</a>
 
         <div class="character-details">
             <h2>The "Local Cop"</h2>
@@ -146,17 +146,29 @@
             <p>Claims he was patrolling the perimeter. He says he was checking for any signs of forced entry.</p>
 
 
-            <h3>Accusations</h3>
+            
+            <div class="accusations-section" style="margin-top: 30px;">
+                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <div style="display:none;">
+                    <h3>Accusations</h3>
             <ul>
                 <li>I saw <strong>Julian</strong> smoking on the porch. <strong>Jack</strong> was nearby.</li>
                 <li>I saw <strong>Jack</strong> and <strong>Blake</strong> outside in the snow.</li>
                 <li>I saw <strong>Cassandra</strong> walking towards the family cemetery.</li>
-            
-    <li>I noticed that <strong>Julian Crimson</strong> arrived uninvited and refused to leave when asked.</li>
-    <li>I noticed that <strong>Cassandra</strong> seems more interested in legal matters than in mourning.</li>
-</ul>
 
-            <h3>Suspicious Behavior</h3>
+                <li>I noticed that <strong>Julian Crimson</strong> arrived uninvited and refused to leave when asked.
+                </li>
+                <li>I noticed that <strong>Cassandra</strong> seems more interested in legal matters than in mourning.
+                </li>
+            </ul>
+                </div>
+            </div>
+
+            
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
+                <div style="display:none;">
+                    <h3>Suspicious Behavior</h3>
             <ul>
                 <li>His police credentials don't check out with the local department</li>
                 <li>Shows an unusual knowledge of each guest's background and secrets</li>
@@ -167,6 +179,8 @@
                 <li>Was overheard making calls about "completing the contract"</li>
                 <li>Was seen handing a manila folder to Eleanor and whispering "I know everything"</li>
             </ul>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -192,7 +206,24 @@
                 alert('Wrong password!');
             }
         }
-    </script>
+    
+        function revealAccusations(btn) {
+            if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealSuspicious(btn) {
+            if (prompt('Enter password (hint: drewdrewdrewdrew):') === 'drewdrewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+</script>
 </body>
 
 </html>

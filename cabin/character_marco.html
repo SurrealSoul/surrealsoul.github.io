@@ -96,7 +96,7 @@
     </header>
 
     <main>
-        <a href="cabin.html" class="back-link">← Back to Murder Mystery</a>
+        <a href="main.html" class="back-link">← Back to Murder Mystery</a>
 
         <div class="character-details">
             <h2>The Business Rival</h2>
@@ -139,22 +139,35 @@
                 </div>
             </div>
 
-            
+
             <h3>Alibi</h3>
-            <p>Claims he was making a late-night business call. He admits there was no signal, but says he was recording a voice memo.</p>
+            <p>Claims he was making a late-night business call. He admits there was no signal, but says he was recording
+                a voice memo.</p>
+
 
             
-            <h3>Accusations</h3>
+            <div class="accusations-section" style="margin-top: 30px;">
+                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <div style="display:none;">
+                    <h3>Accusations</h3>
             <ul>
                 <li>I went to the cellar. <strong>Fiona</strong> was already there drinking.</li>
-    <li>I saw <strong>Julian</strong> trying to pick the lock on the liquor cabinet.</li>
-    <li>I saw <strong>Silas</strong> burning papers in the fireplace.</li>
+                <li>I saw <strong>Julian</strong> trying to pick the lock on the liquor cabinet.</li>
+                <li>I saw <strong>Silas</strong> burning papers in the fireplace.</li>
 
-    <li>I noticed that <strong>Beatrice Crimson</strong> carries a small black bag filled with mysterious vials and bottles.</li>
-    <li>I noticed that <strong>Julian Crimson</strong> has been asking other guests about the contents of the will.</li>
-</ul>
+                <li>I noticed that <strong>Beatrice Crimson</strong> carries a small black bag filled with mysterious
+                    vials and bottles.</li>
+                <li>I noticed that <strong>Julian Crimson</strong> has been asking other guests about the contents of
+                    the will.</li>
+            </ul>
+                </div>
+            </div>
 
-            <h3>Suspicious Behavior</h3>
+            
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
+                <div style="display:none;">
+                    <h3>Suspicious Behavior</h3>
             <ul>
                 <li>Claims to be paying respects despite being a known enemy of Cornelius</li>
                 <li>Has been seen prowling the cabin at odd hours</li>
@@ -164,6 +177,8 @@
                 <li>Has been asking pointed questions about business documents</li>
                 <li>Was overheard promising Captain Jack more money for "additional services"</li>
             </ul>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -189,7 +204,24 @@
                 alert('Wrong password!');
             }
         }
-    </script>
+    
+        function revealAccusations(btn) {
+            if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealSuspicious(btn) {
+            if (prompt('Enter password (hint: drewdrewdrewdrew):') === 'drewdrewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+</script>
 </body>
 
 </html>

@@ -96,7 +96,7 @@
     </header>
 
     <main>
-        <a href="cabin.html" class="back-link">← Back to Murder Mystery</a>
+        <a href="main.html" class="back-link">← Back to Murder Mystery</a>
 
         <div class="character-details">
             <h2>The Widow</h2>
@@ -142,23 +142,37 @@
                 up until the scream.</p>
 
 
-            <h3>Accusations</h3>
+            
+            <div class="accusations-section" style="margin-top: 30px;">
+                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <div style="display:none;">
+                    <h3>Accusations</h3>
             <ul>
                 <li>I was arguing with Cornelius, but <strong>Blake</strong> was right outside the door.</li>
                 <li>I saw <strong>Arthur</strong> lurking in the hallway when I left the study.</li>
                 <li>I saw <strong>Beatrice</strong> heading towards the library late at night.</li>
-            
-    <li>I noticed that <strong>Mr. Silas Croft</strong> has been asking odd questions about the timeline of Cornelius's death.</li>
-    <li>I noticed that <strong>Julian Crimson</strong> arrived uninvited and refused to leave when asked.</li>
-</ul>
 
-            <h3>Suspicious Behavior</h3>
+                <li>I noticed that <strong>Mr. Silas Croft</strong> has been asking odd questions about the timeline of
+                    Cornelius's death.</li>
+                <li>I noticed that <strong>Julian Crimson</strong> arrived uninvited and refused to leave when asked.
+                </li>
+            </ul>
+                </div>
+            </div>
+
+            
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
+                <div style="display:none;">
+                    <h3>Suspicious Behavior</h3>
             <ul>
                 <li>Was heard arguing loudly with Cornelius the night before his death</li>
                 <li>Has been exchanging meaningful glances with Blake Riley</li>
                 <li>Seems more concerned about the will reading than mourning her husband</li>
                 <li>Was wearing a red sequined dress the night before the murder</li>
             </ul>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -184,7 +198,24 @@
                 alert('Wrong password!');
             }
         }
-    </script>
+    
+        function revealAccusations(btn) {
+            if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealSuspicious(btn) {
+            if (prompt('Enter password (hint: drewdrewdrewdrew):') === 'drewdrewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+</script>
 </body>
 
 </html>

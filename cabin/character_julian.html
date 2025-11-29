@@ -96,7 +96,7 @@
     </header>
 
     <main>
-        <a href="cabin.html" class="back-link">← Back to Murder Mystery</a>
+        <a href="main.html" class="back-link">← Back to Murder Mystery</a>
 
         <div class="character-details">
             <h2>The Disowned Son</h2>
@@ -136,22 +136,35 @@
                 </div>
             </div>
 
-            
+
             <h3>Alibi</h3>
-            <p>Claims he was smoking a cigarette on the back porch. He says the storm was too loud to hear anything inside.</p>
+            <p>Claims he was smoking a cigarette on the back porch. He says the storm was too loud to hear anything
+                inside.</p>
+
 
             
-            <h3>Accusations</h3>
+            <div class="accusations-section" style="margin-top: 30px;">
+                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <div style="display:none;">
+                    <h3>Accusations</h3>
             <ul>
                 <li>I was smoking on the porch. <strong>Officer Dunn</strong> saw me.</li>
-    <li>I saw <strong>Jack</strong> wandering around the grounds in the storm.</li>
-    <li>I saw <strong>Marco</strong> trying to get a signal on his phone by the window.</li>
+                <li>I saw <strong>Jack</strong> wandering around the grounds in the storm.</li>
+                <li>I saw <strong>Marco</strong> trying to get a signal on his phone by the window.</li>
 
-    <li>I noticed that <strong>Arthur Doyle</strong> was seen checking and rechecking the locks on all doors.</li>
-    <li>I noticed that <strong>Beatrice Crimson</strong> openly expressed her belief that she deserves the family fortune.</li>
-</ul>
+                <li>I noticed that <strong>Arthur Doyle</strong> was seen checking and rechecking the locks on all
+                    doors.</li>
+                <li>I noticed that <strong>Beatrice Crimson</strong> openly expressed her belief that she deserves the
+                    family fortune.</li>
+            </ul>
+                </div>
+            </div>
 
-            <h3>Suspicious Behavior</h3>
+            
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
+                <div style="display:none;">
+                    <h3>Suspicious Behavior</h3>
             <ul>
                 <li>Arrived uninvited and refused to leave when asked</li>
                 <li>Was heard making violent threats about getting "what's his"</li>
@@ -159,6 +172,8 @@
                 <li>Appears nervous and jumpy, constantly checking his phone for messages</li>
                 <li>Was seen near the study early in the morning before the body was discovered</li>
             </ul>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -184,7 +199,24 @@
                 alert('Wrong password!');
             }
         }
-    </script>
+    
+        function revealAccusations(btn) {
+            if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealSuspicious(btn) {
+            if (prompt('Enter password (hint: drewdrewdrewdrew):') === 'drewdrewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+</script>
 </body>
 
 </html>

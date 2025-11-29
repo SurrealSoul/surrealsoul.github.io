@@ -146,7 +146,11 @@
                 from an animal.</p>
 
 
-            <h3>Accusations</h3>
+            
+            <div class="accusations-section" style="margin-top: 30px;">
+                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <div style="display:none;">
+                    <h3>Accusations</h3>
             <ul>
                 <li>I stood guard while <strong>Eleanor</strong> and Cornelius argued. <strong>Arthur</strong> was
                     eavesdropping.</li>
@@ -156,12 +160,18 @@
     <li>I noticed that <strong>"Captain" Jack</strong> can't explain why the phone lines failed at the exact same time.</li>
     <li>I noticed that <strong>Chloe Bishop</strong> keeps checking her phone for updates about her mother's condition.</li>
 </ul>
+                </div>
+            </div>
 
             <h3>Denials</h3>
             <p>I was patrolling the corridor outside the study from 2:45 AM to 3:30 AM. No one entered or left,
                 certainly not the Chef. <strong>Genevieve</strong> must be mistaken... or lying.</p>
 
-            <h3>Suspicious Behavior</h3>
+            
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
+                <div style="display:none;">
+                    <h3>Suspicious Behavior</h3>
             <ul>
                 <li>Has been exchanging meaningful looks and subtle touches with Eleanor</li>
                 <li>Shows no genuine grief about Cornelius's death</li>
@@ -171,6 +181,8 @@
                 <li>Has been coaching Eleanor on what to say to other guests</li>
                 <li>Seems more concerned about protecting Eleanor's reputation than solving the murder</li>
             </ul>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -196,7 +208,24 @@
                 alert('Wrong password!');
             }
         }
-    </script>
+    
+        function revealAccusations(btn) {
+            if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealSuspicious(btn) {
+            if (prompt('Enter password (hint: drewdrewdrewdrew):') === 'drewdrewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+</script>
 </body>
 
 </html>

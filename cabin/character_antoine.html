@@ -96,7 +96,7 @@
     </header>
 
     <main>
-        <a href="cabin.html" class="back-link">← Back to Murder Mystery</a>
+        <a href="main.html" class="back-link">← Back to Murder Mystery</a>
 
         <div class="character-details">
             <h2>The Private Chef </h2>
@@ -140,22 +140,35 @@
                 </div>
             </div>
 
-            
+
             <h3>Alibi</h3>
-            <p>Claims he was prepping dough for the morning croissants. He says the kitchen is the only warm place in this drafty cabin.</p>
+            <p>Claims he was prepping dough for the morning croissants. He says the kitchen is the only warm place in
+                this drafty cabin.</p>
+
 
             
-            <h3>Accusations</h3>
+            <div class="accusations-section" style="margin-top: 30px;">
+                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <div style="display:none;">
+                    <h3>Accusations</h3>
             <ul>
                 <li>I was in the kitchen. <strong>Timmy</strong> tried to steal a tart.</li>
-    <li>I saw <strong>Genevieve</strong> running from the kitchen.</li>
-    <li>I saw <strong>The Twins</strong> staring at the knife block.</li>
+                <li>I saw <strong>Genevieve</strong> running from the kitchen.</li>
+                <li>I saw <strong>The Twins</strong> staring at the knife block.</li>
 
-    <li>I noticed that <strong>Timmy Crimson</strong> his "accidents" always seem to happen near valuable items or important documents.</li>
-    <li>I noticed that <strong>Beatrice Crimson</strong> carries a small black bag filled with mysterious vials and bottles.</li>
-</ul>
+                <li>I noticed that <strong>Timmy Crimson</strong> his "accidents" always seem to happen near valuable
+                    items or important documents.</li>
+                <li>I noticed that <strong>Beatrice Crimson</strong> carries a small black bag filled with mysterious
+                    vials and bottles.</li>
+            </ul>
+                </div>
+            </div>
 
-            <h3>Suspicious Behavior</h3>
+            
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
+                <div style="display:none;">
+                    <h3>Suspicious Behavior</h3>
             <ul>
                 <li>Has been muttering angrily in French while cooking</li>
                 <li>Was seen sharpening his knives obsessively</li>
@@ -165,6 +178,8 @@
                 <li>His knife set is missing one blade - a small, precise paring knife</li>
                 <li>Seems unusually interested in mushroom varieties, including poisonous ones</li>
             </ul>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -190,7 +205,24 @@
                 alert('Wrong password!');
             }
         }
-    </script>
+    
+        function revealAccusations(btn) {
+            if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealSuspicious(btn) {
+            if (prompt('Enter password (hint: drewdrewdrewdrew):') === 'drewdrewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+</script>
 </body>
 
 </html>

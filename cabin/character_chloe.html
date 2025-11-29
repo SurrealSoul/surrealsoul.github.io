@@ -96,7 +96,7 @@
     </header>
 
     <main>
-        <a href="cabin.html" class="back-link">← Back to Murder Mystery</a>
+        <a href="main.html" class="back-link">← Back to Murder Mystery</a>
 
         <div class="character-details">
             <h2>The Personal Assistant</h2>
@@ -138,22 +138,35 @@
                 </div>
             </div>
 
-            
+
             <h3>Alibi</h3>
-            <p>Claims she was organizing Cornelius's schedule for the next day. She says she was working late to catch up on emails.</p>
+            <p>Claims she was organizing Cornelius's schedule for the next day. She says she was working late to catch
+                up on emails.</p>
+
 
             
-            <h3>Accusations</h3>
+            <div class="accusations-section" style="margin-top: 30px;">
+                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <div style="display:none;">
+                    <h3>Accusations</h3>
             <ul>
                 <li>I saw <strong>Arthur</strong> listening at the study door.</li>
-    <li>I saw <strong>Silas</strong> nervously clutching his briefcase near the guest rooms.</li>
-    <li>I saw <strong>Genevieve</strong> crying in the upstairs hallway.</li>
+                <li>I saw <strong>Silas</strong> nervously clutching his briefcase near the guest rooms.</li>
+                <li>I saw <strong>Genevieve</strong> crying in the upstairs hallway.</li>
 
-    <li>I noticed that <strong>Blake Riley</strong> seems more concerned about protecting Eleanor's reputation than solving the murder.</li>
-    <li>I noticed that <strong>Arthur Doyle</strong> was overheard muttering about "ungrateful masters".</li>
-</ul>
+                <li>I noticed that <strong>Blake Riley</strong> seems more concerned about protecting Eleanor's
+                    reputation than solving the murder.</li>
+                <li>I noticed that <strong>Arthur Doyle</strong> was overheard muttering about "ungrateful masters".
+                </li>
+            </ul>
+                </div>
+            </div>
 
-            <h3>Suspicious Behavior</h3>
+            
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
+                <div style="display:none;">
+                    <h3>Suspicious Behavior</h3>
             <ul>
                 <li>Has been extremely anxious and jumpy since arriving</li>
                 <li>Was seen shredding documents in Cornelius's study the night before</li>
@@ -162,6 +175,8 @@
                 <li>Was overheard crying on the phone about "not having any other choice"</li>
                 <li>Has been avoiding the other staff members</li>
             </ul>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -187,7 +202,24 @@
                 alert('Wrong password!');
             }
         }
-    </script>
+    
+        function revealAccusations(btn) {
+            if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealSuspicious(btn) {
+            if (prompt('Enter password (hint: drewdrewdrewdrew):') === 'drewdrewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+</script>
 </body>
 
 </html>

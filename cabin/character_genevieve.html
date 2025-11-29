@@ -143,7 +143,11 @@
             <p>Claims she was cleaning the upstairs hallway. She says she was too terrified of the storm to sleep.</p>
 
 
-            <h3>Accusations</h3>
+            
+            <div class="accusations-section" style="margin-top: 30px;">
+                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <div style="display:none;">
+                    <h3>Accusations</h3>
             <ul>
                 <li>I saw <strong>Timmy</strong> running from the kitchen. <strong>Antoine</strong> looked furious.</li>
                 <li>I saw <strong>The Twins</strong> walking in the hall. They saw <strong>Dr. Reed</strong> carrying a
@@ -154,8 +158,14 @@
     <li>I noticed that <strong>Dr. Evelyn Reed</strong> was overheard on a phone call saying "it's finally over".</li>
     <li>I noticed that <strong>Officer Dunn</strong> his radio doesn't seem to connect to any actual police dispatch.</li>
 </ul>
+                </div>
+            </div>
 
-            <h3>Suspicious Behavior</h3>
+            
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
+                <div style="display:none;">
+                    <h3>Suspicious Behavior</h3>
             <ul>
                 <li>Has been crying frequently and appears emotionally distraught</li>
                 <li>Clutches a gold locket that she keeps hidden under her uniform</li>
@@ -165,6 +175,8 @@
                 <li>Bears a strong physical resemblance to Cornelius, particularly around the eyes</li>
                 <li>Was overheard whispering "He has to acknowledge me" repeatedly</li>
             </ul>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -190,7 +202,24 @@
                 alert('Wrong password!');
             }
         }
-    </script>
+    
+        function revealAccusations(btn) {
+            if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealSuspicious(btn) {
+            if (prompt('Enter password (hint: drewdrewdrewdrew):') === 'drewdrewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+</script>
 </body>
 
 </html>

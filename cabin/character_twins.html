@@ -146,7 +146,11 @@
                 hands.</p>
 
 
-            <h3>Accusations</h3>
+            
+            <div class="accusations-section" style="margin-top: 30px;">
+                <button onclick="revealAccusations(this)" style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Accusations</button>
+                <div style="display:none;">
+                    <h3>Accusations</h3>
             <ul>
                 <li>We were walking in the hall. We saw <strong>Dr. Reed (Evelyn)</strong> carrying a bag.</li>
                 <li>We saw <strong>Zora</strong> talking to the air in the conservatory.</li>
@@ -156,8 +160,14 @@
     <li>I noticed that <strong>Cassandra</strong> carries what appear to be forged marriage documents.</li>
     <li>I noticed that <strong>Fiona "Foxy" Gable</strong> has been taking extensive notes about everyone's behavior.</li>
 </ul>
+                </div>
+            </div>
 
-            <h3>Suspicious Behavior</h3>
+            
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)" style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Suspicious Behavior</button>
+                <div style="display:none;">
+                    <h3>Suspicious Behavior</h3>
             <ul>
                 <li>They rarely speak to adults, but whisper constantly to each other</li>
                 <li>Have been seen in areas where children shouldn't be able to go</li>
@@ -168,6 +178,8 @@
                 <li>Have been drawing disturbing pictures of the adults in the cabin</li>
                 <li>Their father seems unusually protective and nervous about what they might say</li>
             </ul>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -193,7 +205,24 @@
                 alert('Wrong password!');
             }
         }
-    </script>
+    
+        function revealAccusations(btn) {
+            if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealSuspicious(btn) {
+            if (prompt('Enter password (hint: drewdrewdrewdrew):') === 'drewdrewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+</script>
 </body>
 
 </html>

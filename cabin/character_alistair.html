@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,39 +15,45 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             background-color: #000;
             text-align: center;
             padding: 40px 20px;
             border-bottom: 3px solid #6a0a0a;
         }
+
         h1 {
             color: #a00000;
             margin: 0;
             font-size: 3em;
         }
+
         h2 {
             color: #c79a00;
             border-bottom: 1px solid #555;
             padding-bottom: 10px;
             margin-top: 30px;
         }
+
         main {
             max-width: 800px;
             margin: 30px auto;
             padding: 20px;
             background-color: #2b2b2b;
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.7);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
         }
+
         .character-details {
             background-color: #383838;
             border: 1px solid #555;
             padding: 30px;
             border-radius: 5px;
-            box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
             margin-bottom: 30px;
         }
+
         .secret {
             background-color: #222;
             padding: 15px;
@@ -56,6 +63,7 @@
             font-style: italic;
             color: #ffdddd;
         }
+
         .back-link {
             display: inline-block;
             background-color: #6a0a0a;
@@ -66,9 +74,11 @@
             margin-bottom: 20px;
             transition: background-color 0.2s;
         }
+
         .back-link:hover {
             background-color: #8b0000;
         }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -78,6 +88,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -92,52 +103,86 @@
             <p>An old college "friend" of Cornelius's. He's an expert on rare artifacts, which the cabin is full of.</p>
 
             <div class="secret">
-                    <button onclick="revealSecret(this)" style="padding: 10px; background: #a00000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Secret</button>
-    <div style="display:none;">
-<h3>His Secret</h3>
-                <p>He believes Cornelius stole a priceless artifact from him decades ago and is here to steal it back. He was found picking the lock to the study.</p>
-    </div>
+                <button onclick="revealSecret(this)"
+                    style="padding: 10px; background: #a00000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Secret</button>
+                <div style="display:none;">
+                    <h3>His Secret</h3>
+                    <p>He believes Cornelius stole a priceless artifact from him decades ago and is here to steal it
+                        back. He was found picking the lock to the study.</p>
+                </div>
             </div>
 
             <h3>Background</h3>
-            <p>Professor Alistair Finch taught archaeology and ancient history at Harvard for over 30 years before retiring. He and Cornelius were roommates in college and maintained a friendship built around their shared passion for collecting rare artifacts. However, their relationship soured decades ago over a disputed acquisition that has haunted Finch ever since.</p>
+            <p>Professor Alistair Finch taught archaeology and ancient history at Harvard for over 30 years before
+                retiring. He and Cornelius were roommates in college and maintained a friendship built around their
+                shared passion for collecting rare artifacts. However, their relationship soured decades ago over a
+                disputed acquisition that has haunted Finch ever since.</p>
 
             <h3>Motive</h3>
-            <p>In 1987, Finch discovered what he believed to be a genuine Mesopotamian tablet during an archaeological dig. Before he could properly document it, Cornelius "borrowed" the artifact and later claimed to have purchased it from a different source. The tablet, worth millions, has been displayed in Cornelius's private collection ever since. Finch has spent decades trying to prove it was stolen from him.</p>
+            <p>In 1987, Finch discovered what he believed to be a genuine Mesopotamian tablet during an archaeological
+                dig. Before he could properly document it, Cornelius "borrowed" the artifact and later claimed to have
+                purchased it from a different source. The tablet, worth millions, has been displayed in Cornelius's
+                private collection ever since. Finch has spent decades trying to prove it was stolen from him.</p>
 
             <div class="opportunity-section" style="margin-top: 30px;">
-    <button onclick="revealOpportunity(this)" style="padding: 10px; background: #c79a00; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal Opportunity</button>
-    <div style="display:none;">
-<h3>Opportunity</h3>
-            <p>As an old friend, Finch has been to the cabin many times and knows its layout well. His expertise in ancient artifacts means he knows exactly where Cornelius would hide his most valuable pieces. The cabin's collection room contains dozens of priceless items, including the disputed tablet that Finch considers rightfully his.</p>
-    </div>
-</div>
+                <button onclick="revealOpportunity(this)"
+                    style="padding: 10px; background: #c79a00; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Opportunity</button>
+                <div style="display:none;">
+                    <h3>Opportunity</h3>
+                    <p>As an old friend, Finch has been to the cabin many times and knows its layout well. His expertise
+                        in ancient artifacts means he knows exactly where Cornelius would hide his most valuable pieces.
+                        The cabin's collection room contains dozens of priceless items, including the disputed tablet
+                        that Finch considers rightfully his.</p>
+                </div>
+            </div>
 
-            
+
             <h3>Alibi</h3>
-            <p>Claims he was admiring the artifacts in the gallery. He says he lost track of time studying the Mesopotamian collection.</p>
+            <p>Claims he was admiring the artifacts in the gallery. He says he lost track of time studying the
+                Mesopotamian collection.</p>
 
-            
-            <h3>Accusations</h3>
-            <ul>
-                <li>I saw <strong>Beatrice</strong> and <strong>Zora</strong> conspiring in the library. <strong>Fiona</strong> was hiding there too.</li>
-    <li>I saw <strong>Fiona</strong> slip into the wine cellar.</li>
-    <li>I saw <strong>Antoine</strong> sharpening his knives with unusual aggression.</li>
 
-    <li>I noticed that <strong>Cassandra</strong> shows theatrical mannerisms that suggest professional acting training.</li>
-    <li>I noticed that <strong>Marco "The Shark" Varelli</strong> has been seen prowling the cabin at odd hours.</li>
-</ul>
 
-            <h3>Suspicious Behavior</h3>
-            <ul>
-                <li>Was caught with lock-picking tools outside Cornelius's study</li>
-                <li>Has been examining the artifact collection with unusual intensity</li>
-                <li>Brought a large, empty briefcase that could hold valuable items</li>
-                <li>Shows more interest in the artifacts than in mourning Cornelius</li>
-                <li>Was overheard muttering about "finally getting what's mine"</li>
-                <li>Has been taking detailed notes about security measures</li>
-                <li>Seems to know the value and provenance of every item in the collection</li>
-            </ul>
+            <div class="accusations-section" style="margin-top: 30px;">
+                <button onclick="revealAccusations(this)"
+                    style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Accusations</button>
+                <div style="display:none;">
+                    <h3>Accusations</h3>
+                    <ul>
+                        <li>I saw <strong>Beatrice</strong> and <strong>Zora</strong> conspiring in the library.
+                            <strong>Fiona</strong> was hiding there too.</li>
+                        <li>I saw <strong>Fiona</strong> slip into the wine cellar.</li>
+                        <li>I saw <strong>Antoine</strong> sharpening his knives with unusual aggression.</li>
+
+                        <li>I noticed that <strong>Cassandra</strong> shows theatrical mannerisms that suggest
+                            professional acting training.</li>
+                        <li>I noticed that <strong>Marco "The Shark" Varelli</strong> has been seen prowling the cabin
+                            at odd hours.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <button onclick="revealSuspicious(this)"
+                    style="padding: 10px; background: #333333; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Suspicious Behavior</button>
+                <div style="display:none;">
+                    <h3>Suspicious Behavior</h3>
+                    <ul>
+                        <li>Was caught with lock-picking tools outside Cornelius's study</li>
+                        <li>Has been examining the artifact collection with unusual intensity</li>
+                        <li>Brought a large, empty briefcase that could hold valuable items</li>
+                        <li>Shows more interest in the artifacts than in mourning Cornelius</li>
+                        <li>Was overheard muttering about "finally getting what's mine"</li>
+                        <li>Has been taking detailed notes about security measures</li>
+                        <li>Seems to know the value and provenance of every item in the collection</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -147,23 +192,40 @@
 
 
     <script>
-    function revealSecret(btn) {
-        if (prompt('Enter password (hint: secret):') === 'secret') {
-            btn.nextElementSibling.style.display = 'block';
-            btn.style.display = 'none';
-        } else {
-            alert('Wrong password!');
+        function revealSecret(btn) {
+            if (prompt('Enter password (hint: drew):') === 'drew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
         }
-    }
-    function revealOpportunity(btn) {
-        if (prompt('Enter password (hint: opportunity):') === 'opportunity') {
-            btn.nextElementSibling.style.display = 'block';
-            btn.style.display = 'none';
-        } else {
-            alert('Wrong password!');
+        function revealOpportunity(btn) {
+            if (prompt('Enter password (hint: drewdrew):') === 'drewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
         }
-    }
+
+        function revealAccusations(btn) {
+            if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealSuspicious(btn) {
+            if (prompt('Enter password (hint: drewdrewdrewdrew):') === 'drewdrewdrewdrew') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
     </script>
 </body>
-</html>
 
+</html>
