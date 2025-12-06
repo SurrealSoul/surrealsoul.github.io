@@ -96,7 +96,8 @@
     </header>
 
     <main>
-         <a href="character_alistair_summary.html" class="back-link" style="background-color: #444; margin-left: 10px;">View Roleplay Summary</a>
+        <a href="character_alistair_summary.html" class="back-link"
+            style="background-color: #444; margin-left: 10px;">View Roleplay Summary</a>
         <a href="cabin.html" class="back-link">← Back to Murder Mystery</a>
 
         <div class="character-details">
@@ -147,22 +148,17 @@
 
 
             <div class="suspicious-section" style="margin-top: 30px;">
-                <button onclick="revealSuspicious(this)"
-                    style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;"">Reveal
-                    Suspicious Behavior</button>
-                <div style=" display:none;">
-                    <h3>Suspicious Behavior</h3>
-                    <ul>
-                        <li>Was caught with lock-picking tools outside Cornelius's study</li>
-                        <li>Has been examining the artifact collection with unusual intensity</li>
-                        <li>Brought a large, empty briefcase that could hold valuable items</li>
-                        <li>Shows more interest in the artifacts than in mourning Cornelius</li>
-                        <li>Was overheard muttering about "finally getting what's mine"</li>
-                        <li>Has been taking detailed notes about security measures</li>
-                        <li>Seems to know the value and provenance of every item in the collection</li>
-                    </ul>
+                <h3>Suspicious Behavior</h3>
+                <ul>
+                    <li>Was caught with lock-picking tools outside Cornelius's study</li>
+                    <li>Has been examining the artifact collection with unusual intensity</li>
+                    <li>Brought a large, empty briefcase that could hold valuable items</li>
+                    <li>Shows more interest in the artifacts than in mourning Cornelius</li>
+                    <li>Was overheard muttering about "finally getting what's mine"</li>
+                    <li>Has been taking detailed notes about security measures</li>
+                    <li>Seems to know the value and provenance of every item in the collection</li>
+                </ul>
             </div>
-        </div>
 
 
             <div class="accusations-section" style="margin-top: 30px;">
@@ -173,7 +169,8 @@
                     <h3>Accusations</h3>
                     <ul>
                         <li>I saw <strong>Beatrice</strong> and <strong>Zora</strong> conspiring in the library.
-                            <strong>Fiona</strong> was hiding there too.</li>
+                            <strong>Fiona</strong> was hiding there too.
+                        </li>
                         <li>I saw <strong>Fiona</strong> slip into the wine cellar.</li>
                         <li>I saw <strong>Antoine</strong> sharpening his knives with unusual aggression.</li>
 
@@ -181,6 +178,8 @@
                             professional acting training.</li>
                         <li>I noticed that <strong>Marco "The Shark" Varelli</strong> has been seen prowling the cabin
                             at odd hours.</li>
+                        <li>I must say, I was quite shocked to see <strong>Officer Dunn</strong> performing a rather...
+                            exotic dance at The Velvet Glove last Tuesday.</li>
                     </ul>
                 </div>
             </div>
@@ -194,7 +193,7 @@
 
     <script>
         function revealSecret(btn) {
-            if (prompt('Enter password (hint: drew):') === 'drew') {
+            if (prompt('Enter password (hint: secret):') === 'secret') {
                 btn.nextElementSibling.style.display = 'block';
                 btn.style.display = 'none';
             } else {
@@ -202,7 +201,7 @@
             }
         }
         function revealOpportunity(btn) {
-            if (prompt('Enter password (hint: drewdrew):') === 'drewdrew') {
+            if (prompt('Enter password (hint: opportunity):') === 'opportunity') {
                 btn.nextElementSibling.style.display = 'block';
                 btn.style.display = 'none';
             } else {
@@ -211,15 +210,7 @@
         }
 
         function revealAccusations(btn) {
-            if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
-                btn.nextElementSibling.style.display = 'block';
-                btn.style.display = 'none';
-            } else {
-                alert('Wrong password!');
-            }
-        }
-        function revealSuspicious(btn) {
-            if (prompt('Enter password (hint: drewdrewdrewdrew):') === 'drewdrewdrewdrew') {
+            if (prompt('Enter password (hint: accusation):') === 'accusation') {
                 btn.nextElementSibling.style.display = 'block';
                 btn.style.display = 'none';
             } else {

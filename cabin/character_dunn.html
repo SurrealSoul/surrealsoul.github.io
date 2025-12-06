@@ -96,7 +96,8 @@
     </header>
 
     <main>
-        <a href="main.html" class="back-link">← Back to Murder Mystery</a> <a href="character_dunn_summary.html" class="back-link" style="background-color: #444; margin-left: 10px;">View Roleplay Summary</a>
+        <a href="main.html" class="back-link">← Back to Murder Mystery</a> <a href="character_dunn_summary.html"
+            class="back-link" style="background-color: #444; margin-left: 10px;">View Roleplay Summary</a>
 
         <div class="character-details">
             <h2>The "Local Cop"</h2>
@@ -112,6 +113,8 @@
                     <p>He's not a cop. He's a private investigator hired by Cornelius. He discovered that "Eleanor" is
                         actually a wanted fraudster named Lorelei Vance, and he was planning to turn her in... for a
                         price.</p>
+                    <p>Absolutely never has used his many outfits for anything other than his job as a private
+                        investigator</p>
                 </div>
             </div>
 
@@ -166,26 +169,26 @@
         </div>
 
 
-            <div class="accusations-section" style="margin-top: 30px;">
-                <button onclick="revealAccusations(this)"
-                    style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
-                    Accusations</button>
-                <div style="display:none;">
-                    <h3>Accusations</h3>
-                    <ul>
-                        <li>I saw <strong>Julian</strong> smoking on the porch. <strong>Jack</strong> was nearby.</li>
-                        <li>I saw <strong>Jack</strong> and <strong>Blake</strong> outside in the snow.</li>
-                        <li>I saw <strong>Cassandra</strong> walking towards the family cemetery.</li>
+        <div class="accusations-section" style="margin-top: 30px;">
+            <button onclick="revealAccusations(this)"
+                style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                Accusations</button>
+            <div style="display:none;">
+                <h3>Accusations</h3>
+                <ul>
+                    <li>I saw <strong>Julian</strong> smoking on the porch. <strong>Jack</strong> was nearby.</li>
+                    <li>I saw <strong>Jack</strong> and <strong>Blake</strong> outside in the snow.</li>
+                    <li>I saw <strong>Cassandra</strong> walking towards the family cemetery.</li>
 
-                        <li>I noticed that <strong>Julian Crimson</strong> arrived uninvited and refused to leave when
-                            asked.
-                        </li>
-                        <li>I noticed that <strong>Cassandra</strong> seems more interested in legal matters than in
-                            mourning.
-                        </li>
-                    </ul>
-                </div>
+                    <li>I noticed that <strong>Julian Crimson</strong> arrived uninvited and refused to leave when
+                        asked.
+                    </li>
+                    <li>I noticed that <strong>Cassandra</strong> seems more interested in legal matters than in
+                        mourning.
+                    </li>
+                </ul>
             </div>
+        </div>
         </div>
     </main>
 
@@ -196,7 +199,7 @@
 
     <script>
         function revealSecret(btn) {
-            if (prompt('Enter password (hint: drew):') === 'drew') {
+            if (prompt('Enter password (hint: secret):') === 'secret') {
                 btn.nextElementSibling.style.display = 'block';
                 btn.style.display = 'none';
             } else {
@@ -204,7 +207,7 @@
             }
         }
         function revealOpportunity(btn) {
-            if (prompt('Enter password (hint: drewdrew):') === 'drewdrew') {
+            if (prompt('Enter password (hint: opportunity):') === 'opportunity') {
                 btn.nextElementSibling.style.display = 'block';
                 btn.style.display = 'none';
             } else {
@@ -213,7 +216,7 @@
         }
 
         function revealAccusations(btn) {
-            if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
+            if (prompt('Enter password (hint: accusation):') === 'accusation') {
                 btn.nextElementSibling.style.display = 'block';
                 btn.style.display = 'none';
             } else {
@@ -221,12 +224,8 @@
             }
         }
         function revealSuspicious(btn) {
-            if (prompt('Enter password (hint: drewdrewdrewdrew):') === 'drewdrewdrewdrew') {
-                btn.nextElementSibling.style.display = 'block';
-                btn.style.display = 'none';
-            } else {
-                alert('Wrong password!');
-            }
+            btn.nextElementSibling.style.display = 'block';
+            btn.style.display = 'none';
         }
     </script>
 </body>

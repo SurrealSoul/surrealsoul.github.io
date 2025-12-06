@@ -96,7 +96,8 @@
     </header>
 
     <main>
-        <a href="main.html" class="back-link">← Back to Murder Mystery</a> <a href="character_beatrice_summary.html" class="back-link" style="background-color: #444; margin-left: 10px;">View Roleplay Summary</a>
+        <a href="main.html" class="back-link">← Back to Murder Mystery</a> <a href="character_beatrice_summary.html"
+            class="back-link" style="background-color: #444; margin-left: 10px;">View Roleplay Summary</a>
 
         <div class="character-details">
             <h2>The Spiteful Sister</h2>
@@ -175,6 +176,8 @@
                     <li>I noticed that <strong>Genevieve</strong> was seen lingering outside Cornelius's study,
                         apparently
                         gathering courage.</li>
+                    <li>My dear, I was scandalized to see <strong>Officer Dunn</strong> taking it all off at a nightclub
+                        recently.</li>
                 </ul>
             </div>
         </div>
@@ -188,7 +191,7 @@
 
     <script>
         function revealSecret(btn) {
-            if (prompt('Enter password (hint: drew):') === 'drew') {
+            if (prompt('Enter password (hint: secret):') === 'secret') {
                 btn.nextElementSibling.style.display = 'block';
                 btn.style.display = 'none';
             } else {
@@ -196,7 +199,7 @@
             }
         }
         function revealOpportunity(btn) {
-            if (prompt('Enter password (hint: drewdrew):') === 'drewdrew') {
+            if (prompt('Enter password (hint: opportunity):') === 'opportunity') {
                 btn.nextElementSibling.style.display = 'block';
                 btn.style.display = 'none';
             } else {
@@ -205,7 +208,7 @@
         }
 
         function revealAccusations(btn) {
-            if (prompt('Enter password (hint: drewdrewdrew):') === 'drewdrewdrew') {
+            if (prompt('Enter password (hint: accusation):') === 'accusation') {
                 btn.nextElementSibling.style.display = 'block';
                 btn.style.display = 'none';
             } else {
@@ -213,12 +216,8 @@
             }
         }
         function revealSuspicious(btn) {
-            if (prompt('Enter password (hint: drewdrewdrewdrew):') === 'drewdrewdrewdrew') {
-                btn.nextElementSibling.style.display = 'block';
-                btn.style.display = 'none';
-            } else {
-                alert('Wrong password!');
-            }
+            btn.nextElementSibling.style.display = 'block';
+            btn.style.display = 'none';
         }
     </script>
 </body>
