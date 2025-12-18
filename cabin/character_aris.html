@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Aris Thorne - The Health Associate</title>
+
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 3px solid #6a0a0a;
+        }
+
+        h1 {
+            color: #a00000;
+            margin: 0;
+            font-size: 3em;
+        }
+
+        h2 {
+            color: #c79a00;
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #2b2b2b;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .character-details {
+            background-color: #383838;
+            border: 1px solid #555;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        .secret {
+            background-color: #222;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            border-left: 3px solid #a00000;
+            font-style: italic;
+            color: #ffdddd;
+        }
+
+        .back-link {
+            display: inline-block;
+            background-color: #6a0a0a;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            transition: background-color 0.2s;
+        }
+
+        .back-link:hover {
+            background-color: #8b0000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #777;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Dr. Aris Thorne (ID: ZX12)</h1>
+    </header>
+
+    <main>
+        <a href="main.html" class="back-link">← Back to Murder Mystery</a>
+
+        <div class="character-details">
+            <h2>The Health Associate</h2>
+            <p>Cornelius's private "wellness consultant" who managed his diet, supplements, and longevity treatments.
+            </p>
+
+            <div class="secret">
+                <button onclick="revealSecret(this)"
+                    style="padding: 10px; background: #a00000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Secret</button>
+                <div style="display:none;">
+                    <h3>His Secret</h3>
+                    <p>He isn't actually a medical doctor; his degree is from a non-accredited online university. He's
+                        been prescribing Cornelius placebos and dangerous unapproved supplements.</p>
+                </div>
+            </div>
+
+            <h3>Background</h3>
+            <p>Aris Thorne presented himself as a revolutionary in the field of life extension and bio-hacking. He
+                charmed his way into Cornelius's inner circle, promising the aging billionaire decades of extra life
+                through his "proprietary protocols." In reality, he's a con artist with a background in multi-level
+                marketing schemes.</p>
+
+            <h3>Motive</h3>
+            <p>Cornelius recently had his bloodwork analyzed by a legitimate lab and discovered that Thorne's
+                "exclusive" life-extension treatments were just sugar pills and caffeine. Cornelius was furious and was
+                preparing to sue Thorne for fraud and have him arrested.</p>
+
+            <div class="opportunity-section" style="margin-top: 30px;">
+                <button onclick="revealOpportunity(this)"
+                    style="padding: 10px; background: #c79a00; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Opportunity</button>
+                <div style="display:none;">
+                    <h3>Opportunity</h3>
+                    <p>Thorne had unrestricted access to Cornelius's food and drink, as he prepared all of his
+                        "nutritional supplements." He was in the kitchen mixing a "vitality blend" for Cornelius shortly
+                        before the death.</p>
+                </div>
+            </div>
+
+
+            <h3>Alibi</h3>
+            <p>Claims he was in the kitchen preparing Cornelius's evening "vitality blend" and organizing his supplement
+                case.</p>
+
+
+
+            <div class="suspicious-section" style="margin-top: 30px;">
+                <h3>Suspicious Behavior</h3>
+                <ul>
+                    <li>Visibly sweating when the poison is mentioned</li>
+                    <li>Trying to hide a bag of unlabeled pills in the trash</li>
+                    <li>Constantly checking his own pulse</li>
+                    <li>Was seen wiping down the handle of the refrigerator</li>
+                    <li>Insisted on "examining" the body before the police arrived</li>
+                </ul>
+            </div>
+
+
+            <div class="accusations-section" style="margin-top: 30px;">
+                <button onclick="revealAccusations(this)"
+                    style="padding: 10px; background: #550000; color: white; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Reveal
+                    Accusations</button>
+                <div style="display:none;">
+                    <h3>Accusations</h3>
+                    <ul>
+                        <li>I saw <strong>Chef Antoine</strong> putting something strange in the soup.</li>
+                        <li><strong>Genevieve</strong> was looking through my medical bag when she thought I wasn't
+                            looking.</li>
+                        <li>I saw <strong>Arthur</strong> trying to access the master safe. He claimed he was looking
+                            for a first aid kit.</li>
+                        <li><strong>Madam Zora</strong> told me she "saw death" around Cornelius weeks, is she planning
+                            something?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Health is wealth... especially when you're stealing it.</p>
+    </footer>
+
+
+    <script>
+        function revealSecret(btn) {
+            if (prompt('Enter password (hint: secret):') === 'secret') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+        function revealOpportunity(btn) {
+            if (prompt('Enter password (hint: opportunity):') === 'opportunity') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+
+        function revealAccusations(btn) {
+            if (prompt('Enter password (hint: accusation):') === 'accusation') {
+                btn.nextElementSibling.style.display = 'block';
+                btn.style.display = 'none';
+            } else {
+                alert('Wrong password!');
+            }
+        }
+    </script>
+</body>
+
+</html>
